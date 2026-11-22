@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Histórico de atualizações · NOVVO</title>
+<meta name="description" content="Tudo que foi adicionado, removido, corrigido e alterado no NOVVO a cada versão publicada.">
+<link rel="canonical" href="https://novvo-ideias.vercel.app/changelog.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;--space-7:64px;
+    --ink:#0B0B0B;--muted:#6E6E6E;--line:#ECECEC;--bg:#FFFFFF;--g1:#7A1FA2;--g2:#D61C8C;--g3:#F0577A;--g4:#FF8A3D;--g5:#FFE24D}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{overflow-x:clip}
+  body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+  .container{max-width:1120px;margin:0 auto;padding:0 32px}
+  a{color:inherit}
+  nav.top{display:flex;align-items:center;justify-content:space-between;height:88px;gap:var(--space-3)}
+  .brand{display:inline-flex;align-items:flex-start;gap:2px;font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g4));margin-top:-3px;box-shadow:0 0 0 2px var(--bg)}
+  .back{display:inline-flex;align-items:center;height:40px;border:1px solid var(--ink);border-radius:999px;padding:0 var(--space-4);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s}
+  .back:hover{background:var(--ink);color:#fff}
+  .back:focus-visible,.ver a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  header.top{padding-block:var(--space-7) var(--space-6)}
+  h1{font-size:clamp(36px,6vw,64px);font-weight:600;letter-spacing:-.05em;line-height:1.05}
+  header.top p{max-width:560px;margin-top:var(--space-3);color:var(--muted);font-size:16px;line-height:1.6}
+  .versao{display:grid;grid-template-columns:200px minmax(0,1fr);gap:var(--space-5);padding:var(--space-5) 0 var(--space-6);border-top:1px solid var(--ink)}
+  .ver{position:relative}
+  .ver .tag{display:inline-block;font-size:28px;line-height:1.1;letter-spacing:-.03em}
+  .ver time{display:block;margin-top:var(--space-1);font-size:13px;color:var(--muted)}
+  .ver .atual{display:inline-block;margin-top:var(--space-2);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px;color:#fff;background:linear-gradient(120deg,var(--g2),var(--g4))}
+  .ver a{display:block;margin-top:var(--space-3);font-size:12px;color:var(--muted);text-underline-offset:3px}
+  .ver a:hover{color:var(--ink)}
+  h2{font-size:20px;font-weight:600;letter-spacing:-.03em;line-height:1.25;margin-bottom:var(--space-4)}
+  .grupo{margin-bottom:var(--space-4)}
+  .grupo h3{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin-bottom:var(--space-3)}
+  .add h3{background:#E3F6EA;color:#14653A}.rem h3{background:#FDE8E8;color:#A3191F}.fix h3{background:#E4EEFF;color:#1F4FB4}.alt h3{background:#FFF0D6;color:#8A4B00}
+  .grupo ul{list-style:none;display:grid;gap:var(--space-2)}
+  .grupo li{position:relative;padding-left:var(--space-4);font-size:15px;line-height:1.55;color:#262626}
+  .grupo li::before{content:"";position:absolute;left:6px;top:.62em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g4))}
+  footer{background:linear-gradient(100deg,#5e1480,#a8157a);color:rgba(255,255,255,.75);font-size:12px;margin-top:var(--space-6)}
+  footer .container{display:flex;justify-content:space-between;padding-top:var(--space-4);padding-bottom:var(--space-4);gap:var(--space-3);flex-wrap:wrap}
+  footer a{color:#fff;text-underline-offset:3px}
+  @media (max-width:720px){
+    .container{padding-left:var(--space-3);padding-right:var(--space-3)}
+    nav.top{height:64px}
+    header.top{padding-block:var(--space-6) var(--space-5)}
+    .versao{grid-template-columns:1fr;gap:var(--space-4)}
+    .ver .tag{font-size:24px}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav class="top">
+      <a class="brand" href="/" aria-label="NOVVO, voltar ao site">NOVVO<span class="dot"></span></a>
+      <a class="back" href="/">Voltar ao site</a>
+    </nav>
+  </div>
+
+  <main>
+    <header class="top container">
+      <h1>Histórico de <span class="serif">atualizações</span></h1>
+      <p>Tudo que foi adicionado, removido, corrigido e alterado no NOVVO, versão por versão, da mais nova para a mais antiga.</p>
+    </header>
+
+    <div class="container">
+
+      <section class="versao" id="v2-1">
+        <div class="ver"><span class="tag serif">v2.1</span><time datetime="2026-11-22">22/11/2026</time><span class="atual">Mais recente</span></div>
+        <div>
+          <h2>Ajustes de uso, acessibilidade e compartilhamento</h2>
+          <div class="grupo add"><h3>Adicionado</h3><ul>
+            <li>Esta página de histórico, com link no rodapé do site.</li>
+            <li>Nova imagem de compartilhamento, com o texto atualizado (10 sites).</li>
+            <li>Contorno visível na busca quando ela é usada pelo teclado.</li>
+            <li>Os cards agora aparecem mesmo em navegadores com JavaScript desligado.</li>
+          </ul></div>
+          <div class="grupo fix"><h3>Corrigido</h3><ul>
+            <li>O botão "Explorar a biblioteca" agora leva direto à barra de busca e aos primeiros cards. Antes parava no texto de apresentação, com os cards fora da tela.</li>
+            <li>Clicar no menu, nos chips ou nos links do texto durante uma busca limpa a busca e leva até a seção. Antes não acontecia nada.</li>
+            <li>Rótulos "MCP", "CUSTO" e "Sem MCP oficial" com contraste maior, mais fáceis de ler.</li>
+            <li>Nomes como "Awwwards" e "Midjourney" não ficam mais cortados em telas bem pequenas.</li>
+          </ul></div>
+          <div class="grupo alt"><h3>Alterado</h3><ul>
+            <li>Área de clique maior nos links do menu do topo e nos links dentro dos textos.</li>
+          </ul></div>
+        </div>
+      </section>
+
+      <section class="versao" id="v2-0">
+        <div class="ver"><span class="tag serif">v2.0</span><time datetime="2026-11-22">22/11/2026</time><a href="https://github.com/Cronos-noble/Novvo-ideias/compare/f4bf531...383e14f" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div>
+        <div>
+          <h2>Curadoria enxuta, favicons reais e glossário</h2>
+          <div class="grupo add"><h3>Adicionado</h3><ul>
+            <li>Higgsfield, na categoria de Ilustrações e Vídeos com IA.</li>
+            <li>Favicon real de cada site listado.</li>
+            <li>Glossário com 10 termos que aparecem no site, como MCP, agentes de IA, UI e UX, layout e mockup.</li>
+            <li>Bloco "Para que serve?" explicando a proposta do site.</li>
+            <li>Crédito "Criado por @_wellingtongg" no rodapé.</li>
+            <li>Novo favicon do site: "N" preto com a bolinha gradiente da marca.</li>
+            <li>Bolinha gradiente, no estilo de notificação, ao lado do NOVVO no menu.</li>
+            <li>Link "O que é MCP?" na legenda dos cards.</li>
+          </ul></div>
+          <div class="grupo rem"><h3>Removido</h3><ul>
+            <li>32 sites: Behance, Land-book, Godly, Lapa Ninja, SiteInspire, Minimal Gallery, Pixabay, Burst, Kaboompics, StockSnap, Openverse, Freepik, unDraw, Storyset, Blush, 3dicons, Shots, remove.bg, Lucide, Phosphor, Heroicons, Tabler Icons, Iconoir, Google Fonts, Fontshare, Fontpair, Typewolf, Coolors, Realtime Colors, Happy Hues, Haikei e CSS Gradient.</li>
+            <li>As categorias Ícones, Fontes e Cores.</li>
+            <li>Os passos 1, 2 e 3 da apresentação.</li>
+            <li>O celular 3D do topo e a biblioteca Three.js que o animava. O código da página ficou cerca de 66% menor.</li>
+          </ul></div>
+          <div class="grupo fix"><h3>Corrigido</h3><ul>
+            <li>Ao clicar nos links do menu do topo, o título da seção ficava cortado atrás da barra de busca, no computador e no celular.</li>
+            <li>Os números das seções (01, 02…) deixavam os títulos desalinhados.</li>
+          </ul></div>
+          <div class="grupo alt"><h3>Alterado</h3><ul>
+            <li>De 41 sites em 7 categorias para 10 sites em 4 categorias.</li>
+            <li>"Ilustrações, 3D e IA" agora se chama "Ilustrações e Vídeos com IA".</li>
+            <li>Cabeçalho mais curto, com o texto de apoio em uma linha só.</li>
+            <li>"NOVVO" gigante da faixa final menor.</li>
+            <li>Legenda "MCP para IA" virou "MCP para agentes de IA".</li>
+            <li>Menu do topo: saíram Ícones, Fontes e Cores, entraram Ilustrações, Ferramentas e Glossário.</li>
+            <li>Grade dos cards de 5 para 4 colunas.</li>
+            <li>Rótulos "MCP" e "CUSTO" maiores (de 9,5 para 11 pixels).</li>
+          </ul></div>
+        </div>
+      </section>
+
+      <section class="versao" id="v1-1">
+        <div class="ver"><span class="tag serif">v1.1</span><time datetime="2026-11-17">17/11/2026, noite</time><a href="https://github.com/Cronos-noble/Novvo-ideias/compare/b3f76f6...f4bf531" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div>
+        <div>
+          <h2>Pré-visualização ao compartilhar o link</h2>
+          <div class="grupo add"><h3>Adicionado</h3><ul>
+            <li>Imagem e texto de pré-visualização ao colar o link em redes sociais e mensageiros.</li>
+            <li>Descrição do site para os buscadores e endereço canônico.</li>
+          </ul></div>
+          <div class="grupo rem"><h3>Removido</h3><ul>
+            <li>Botão "Começar" do menu superior.</li>
+            <li>Texto "41 sites · pressione / para buscar" do rodapé.</li>
+          </ul></div>
+          <div class="grupo alt"><h3>Alterado</h3><ul>
+            <li>Texto do rodapé: de "Biblioteca para começar sites" para "Do zero ao Rascunho".</li>
+          </ul></div>
+        </div>
+      </section>
+
+      <section class="versao" id="v1-0">
+        <div class="ver"><span class="tag serif">v1.0</span><time datetime="2026-11-17">17/11/2026, tarde</time><a href="https://github.com/Cronos-noble/Novvo-ideias/commit/b3f76f6" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div>
+        <div>
+          <h2>Primeira publicação</h2>
+          <div class="grupo add"><h3>Adicionado</h3><ul>
+            <li>Site NOVVO com 41 sites de referência em 7 categorias: Inspiração, Imagens, Ilustrações, Ícones, Fontes, Cores e Ferramentas.</li>
+            <li>Busca com atalho "/" e chips de atalho para cada categoria.</li>
+            <li>Legenda de MCP e custo em cada card.</li>
+            <li>Celular 3D no topo e faixa final "Seu Próximo Site Começa Hoje".</li>
+          </ul></div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer><div class="container"><span>© NOVVO · Do zero ao Rascunho</span><span>Criado por <a href="https://x.com/_wellingtongg" target="_blank" rel="noopener noreferrer">@_wellingtongg</a></span></div></footer>
+</body>
+</html>
