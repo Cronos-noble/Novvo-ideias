@@ -12,14 +12,14 @@
 <meta property="og:title" content="NOVVO · Comece seu site do zero">
 <meta property="og:description" content="10 sites escolhidos a dedo: inspiração, imagens grátis, IA e ferramentas em um só lugar.">
 <meta property="og:url" content="https://novvo-ideias.vercel.app/">
-<meta property="og:image" content="https://novvo-ideias.vercel.app/og-image.png">
+<meta property="og:image" content="https://novvo-ideias.vercel.app/og-image.png?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="NOVVO: comece seu site do zero">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NOVVO · Comece seu site do zero">
 <meta name="twitter:description" content="10 sites escolhidos a dedo: inspiração, imagens grátis, IA e ferramentas em um só lugar.">
-<meta name="twitter:image" content="https://novvo-ideias.vercel.app/og-image.png">
+<meta name="twitter:image" content="https://novvo-ideias.vercel.app/og-image.png?v=2">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -42,7 +42,7 @@
   .brand{display:inline-flex;align-items:flex-start;gap:2px;font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
   .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g4));margin-top:-3px;box-shadow:0 0 0 2px var(--bg)}
   .links{display:flex;gap:var(--space-4);font-size:13px}
-  .links a{text-decoration:none;opacity:.75;transition:opacity .2s}
+  .links a{text-decoration:none;opacity:.75;transition:opacity .2s;padding:12px 4px;margin:0 -4px}
   .links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
   .pill{display:inline-flex;align-items:center;gap:var(--space-2);height:40px;border:1px solid var(--ink);border-radius:999px;padding:0 var(--space-4);font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;background:transparent;cursor:pointer;color:var(--ink);transition:background .25s,color .25s;white-space:nowrap}
   .pill svg{width:14px;height:14px;transition:transform .25s}
@@ -66,6 +66,7 @@
   .toolbar{position:sticky;top:var(--nav-h);z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:var(--space-3) 0;border-bottom:1px solid var(--line)}
   .toolbar .container{display:flex;gap:var(--space-3);align-items:center;flex-wrap:wrap}
   .search{display:flex;align-items:center;gap:var(--space-2);height:40px;border:1px solid var(--ink);border-radius:999px;padding:0 var(--space-3);flex:0 1 296px;min-width:224px;background:#fff}
+  .search:focus-within{box-shadow:0 0 0 3px rgba(11,11,11,.18)}
   .search svg{width:16px;height:16px;flex:none}
   .search input{border:0;outline:0;font:inherit;font-size:14px;width:100%;background:transparent;color:var(--ink)}
   .chips{display:flex;align-items:center;gap:var(--space-2);overflow-x:auto;scrollbar-width:none;flex:1}
@@ -94,12 +95,12 @@
   .item small{display:block;margin-bottom:var(--space-3);font-size:13px;line-height:1.55;color:var(--muted)}
   .meta{display:flex;flex-direction:column;gap:var(--space-1);align-self:start;padding-top:var(--space-2);border-top:1px dashed var(--line)}
   .meta .row{display:grid;grid-template-columns:48px 1fr;gap:var(--space-2);align-items:baseline;font-size:12px;line-height:1.4}
-  .meta .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A3A3A3}
+  .meta .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#767676}
   .meta .v{color:#3A3A3A;font-weight:500}
   .meta .v i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:var(--space-2);vertical-align:1px;background:#CFCFCF}
   .meta .mcp-of{color:#A1125F}.meta .mcp-of i{background:linear-gradient(135deg,var(--g2),var(--g4))}
   .meta .mcp-te i{background:#F2B24A}
-  .meta .mcp-no{color:#8A8A8A}
+  .meta .mcp-no{color:#6E6E6E}
   .legend{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;line-height:16px;color:var(--muted);padding-top:32px}
   .legend b{color:var(--ink);font-weight:600;margin-right:8px}
   .legend span{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 var(--space-3);border:1px solid var(--line);border-radius:999px;background:#fff}
@@ -113,7 +114,8 @@
   .about h3{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
   .about p{font-size:15px;line-height:1.6;color:var(--muted)}.about p+p{margin-top:var(--space-3)}
   .about a,.legend .gl{color:var(--ink);text-underline-offset:4px}
-  .legend .gl{font-size:12px;margin-left:var(--space-2)}
+  .legend .gl{font-size:12px;margin-left:var(--space-2);padding:8px 0}
+  .about a{padding:4px 0}
   .glossario{padding-top:var(--space-7)}
   .terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4) var(--space-5)}
   .terms>div{border-top:1px dashed var(--line);padding-top:var(--space-3)}
@@ -147,7 +149,9 @@
     .cat-head{grid-template-columns:auto 1fr;gap:var(--space-3)}.cnt{display:none}.num{font-size:42px}.cat-head h3{font-size:24px}
   }
   @media (prefers-reduced-motion:reduce){.item{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  @media (max-width:360px){.item .arrow{display:none}}
 </style>
+<noscript><style>.item{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
   <div class="navwrap" id="navwrap">
@@ -164,7 +168,7 @@
       <span class="kicker serif">Do zero ao primeiro rascunho.</span>
       <h1>Todo Site Bom<br>Começa Aqui</h1>
       <p>Inspiração, imagens, IA e ferramentas num lugar só.</p>
-      <a class="pill" href="#biblioteca">Explorar a biblioteca <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="pill" href="#inspiracao">Explorar a biblioteca <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </section>
 
     <section class="container" id="biblioteca">
@@ -267,7 +271,7 @@
       </div>
     </section>
   </main>
-  <footer><div class="container"><span>© NOVVO · Do zero ao Rascunho</span><span>Criado por <a href="https://x.com/_wellingtongg" target="_blank" rel="noopener noreferrer">@_wellingtongg</a></span></div></footer>
+  <footer><div class="container"><span>© NOVVO · Do zero ao Rascunho · <a href="changelog.html">Histórico de atualizações</a></span><span>Criado por <a href="https://x.com/_wellingtongg" target="_blank" rel="noopener noreferrer">@_wellingtongg</a></span></div></footer>
 
 <script>
   const items=[...document.querySelectorAll('.item')];
@@ -298,8 +302,9 @@
     if(innerHeight+scrollY>=document.documentElement.scrollHeight-4&&vis.length){const last=vis[vis.length-1];if(last.getBoundingClientRect().top<innerHeight)cur=last}
     if(cur)setActive(cur.id);else chips.forEach(c=>c.classList.remove('on'));
   }
-  chips.forEach(c=>c.addEventListener('click',e=>{
+  document.querySelectorAll('.chip,.links a,.about a,.legend .gl,.hero .pill').forEach(c=>c.addEventListener('click',e=>{
     e.preventDefault();const id=c.getAttribute('href').slice(1);const sec=document.getElementById(id);
+    if(sec&&sec.style.display==='none'&&q.value){q.value='';q.dispatchEvent(new Event('input'))}
     if(!sec||sec.style.display==='none')return;
     lockId=id;setActive(id);clearTimeout(lockTimer);lockTimer=setTimeout(()=>{lockId=null},1200);
     const head=sec.querySelector('.cat-head')||sec;const stick=(parseFloat(getComputedStyle(bar).top)||0)+bar.offsetHeight;const y=head.getBoundingClientRect().top+scrollY-stick-24;
