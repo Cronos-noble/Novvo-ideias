@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NOVVO · Comece seu site do zero</title>
-<meta name="description" content="41 sites de referência, imagens grátis, ícones, fontes e ferramentas em um só lugar para começar seu site do zero.">
+<meta name="description" content="10 sites escolhidos a dedo: inspiração, imagens grátis, IA e ferramentas em um só lugar para começar seu site do zero.">
 <link rel="canonical" href="https://novvo-ideias.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NOVVO">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="NOVVO · Comece seu site do zero">
-<meta property="og:description" content="41 sites de referência, imagens grátis, ícones, fontes e ferramentas em um só lugar.">
+<meta property="og:description" content="10 sites escolhidos a dedo: inspiração, imagens grátis, IA e ferramentas em um só lugar.">
 <meta property="og:url" content="https://novvo-ideias.vercel.app/">
 <meta property="og:image" content="https://novvo-ideias.vercel.app/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -18,15 +18,18 @@
 <meta property="og:image:alt" content="NOVVO: comece seu site do zero">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NOVVO · Comece seu site do zero">
-<meta name="twitter:description" content="41 sites de referência, imagens grátis, ícones, fontes e ferramentas em um só lugar.">
+<meta name="twitter:description" content="10 sites escolhidos a dedo: inspiração, imagens grátis, IA e ferramentas em um só lugar.">
 <meta name="twitter:image" content="https://novvo-ideias.vercel.app/og-image.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root{--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;--space-7:64px;--nav-h:88px;
     --ink:#0B0B0B;--muted:#6E6E6E;--line:#ECECEC;--bg:#FFFFFF;--g1:#7A1FA2;--g2:#D61C8C;--g3:#F0577A;--g4:#FF8A3D;--g5:#FFE24D}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + var(--toolbar-h,73px) + 24px)}
   html,body{overflow-x:clip}
   body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
   .serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
@@ -36,8 +39,8 @@
   .navwrap{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.78);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);box-shadow:0 1px 0 transparent;transition:box-shadow .3s}
   .navwrap.scrolled{box-shadow:0 1px 0 var(--line)}
   nav.top{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:var(--space-3)}
-  .brand{display:inline-flex;align-items:center;gap:var(--space-2);font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
-  .brand .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g4))}
+  .brand{display:inline-flex;align-items:flex-start;gap:2px;font-weight:800;font-size:20px;letter-spacing:-.04em;text-decoration:none}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g4));margin-top:-3px;box-shadow:0 0 0 2px var(--bg)}
   .links{display:flex;gap:var(--space-4);font-size:13px}
   .links a{text-decoration:none;opacity:.75;transition:opacity .2s}
   .links a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
@@ -46,31 +49,12 @@
   .pill:hover{background:var(--ink);color:#fff}
   .pill:hover svg{transform:translateX(3px)}
   /* HERO */
-  .hero{text-align:center;padding:var(--space-7) 0 0}
+  .hero{text-align:center;padding:var(--space-6) 0 0}
   .hero .kicker{font-size:24px;margin-bottom:var(--space-2);display:block}
-  .hero h1{font-size:clamp(44px,7.4vw,84px);font-weight:600;letter-spacing:-.05em;line-height:1}
-  .hero p{max-width:544px;margin:var(--space-4) auto var(--space-5);color:var(--muted);font-size:16px;line-height:1.6}
-  .halo{position:relative;height:496px;margin-top:0;display:grid;place-items:center}
-  .halo::before{content:"";position:absolute;inset:40px -20vw 60px;background:
-     radial-gradient(40% 55% at 22% 55%,rgba(214,28,140,.55),transparent 70%),
-     radial-gradient(35% 45% at 50% 38%,rgba(255,138,61,.55),transparent 70%),
-     radial-gradient(38% 50% at 80% 52%,rgba(240,87,122,.55),transparent 70%),
-     radial-gradient(30% 35% at 60% 20%,rgba(255,226,77,.45),transparent 70%);filter:blur(40px)}
-  .phone{position:relative;z-index:1;width:208px;height:416px;border-radius:40px;padding:8px;background:linear-gradient(145deg,#d9d9de,#8d8d95 40%,#e9e9ee 60%,#7c7c84);box-shadow:0 40px 80px -20px rgba(80,0,60,.45);animation:float 6s ease-in-out infinite}
-  .screen{width:100%;height:100%;border-radius:32px;overflow:hidden;position:relative;background:radial-gradient(80% 60% at 30% 25%,var(--g4),transparent 60%),radial-gradient(70% 60% at 80% 40%,#3b2bd6,transparent 65%),radial-gradient(90% 70% at 40% 90%,#cfd6e8,transparent 60%),linear-gradient(160deg,var(--g2),#4b1a9a)}
-  .screen::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:70px;height:20px;border-radius:12px;background:#0b0b0b}
-  .screen .wm{position:absolute;top:96px;left:0;right:0;text-align:center;color:#fff;font-weight:800;font-size:34px;letter-spacing:-.05em;text-shadow:0 4px 20px rgba(0,0,0,.2)}
-  .screen .wm small{display:block;font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:15px;letter-spacing:0;opacity:.9}
-  .screen .mini{position:absolute;inset:auto 16px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-2)}
-  .screen .mini span{aspect-ratio:1;border-radius:12px;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 4px 10px rgba(0,0,0,.12)}
-  .screen .mini svg{width:60%;height:60%}
-  @keyframes float{0%,100%{transform:rotate(14deg) translateY(0)}50%{transform:rotate(12deg) translateY(-12px)}}
-  #phone3d{position:absolute;z-index:2;left:50%;top:50%;width:480px;height:480px;transform:translate(-50%,-50%);opacity:0;transition:opacity .6s ease;pointer-events:auto;cursor:grab}
-  .halo.has3d #phone3d{opacity:1}
-  .halo.has3d .phone{display:none}
-  @media (max-width:720px){#phone3d{width:400px;height:400px}}
+  .hero h1{font-size:clamp(40px,6.4vw,72px);font-weight:600;letter-spacing:-.05em;line-height:1}
+  .hero p{max-width:480px;margin:var(--space-3) auto var(--space-4);color:var(--muted);font-size:16px;line-height:1.6}
   /* INTRO */
-  .intro{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--space-6);align-items:center;padding:96px 0 var(--space-7)}
+  .intro{display:grid;grid-template-columns:1.3fr 1fr;gap:var(--space-6);align-items:center;padding:var(--space-7) 0 var(--space-6)}
   .intro h2{font-size:clamp(40px,6vw,68px);font-weight:600;letter-spacing:-.045em;line-height:1}
   .intro h2 .serif{font-size:1.08em}
   .intro p{font-size:19px;line-height:1.45;letter-spacing:-.01em;max-width:320px;justify-self:end}
@@ -94,22 +78,23 @@
   /* CATEGORIES */
   .cat{padding-top:var(--space-7)}
   .cat-head{display:grid;grid-template-columns:auto 1fr auto;gap:var(--space-4);align-items:end;padding-bottom:var(--space-4);margin-bottom:var(--space-5);border-bottom:1px solid var(--line)}
-  .num{font-size:52px;line-height:.8;background:linear-gradient(120deg,var(--g2),var(--g4));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:4px}
+  .num{min-width:56px;font-size:52px;line-height:.8;background:linear-gradient(120deg,var(--g2),var(--g4));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:4px}
   .cat-head h3{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
   .cat-head p{font-size:14px;color:var(--muted);margin-top:var(--space-1)}
   .cnt{font-size:12px;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--space-6) var(--space-4)}
+  .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-6) var(--space-4)}
   .item{text-decoration:none;display:grid;grid-template-rows:subgrid;grid-template-columns:minmax(0,1fr);grid-row:span 3;row-gap:0;align-content:start;min-width:0;opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
   .item.in{opacity:1;transform:none}
   .item .head{display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-2)}
   .item .logo{width:32px;height:32px;flex:none;display:grid;place-items:center;border-radius:8px;background:#fff;box-shadow:0 0 0 1px var(--line)}
   .item .logo svg{width:20px;height:20px}
+  .item .logo img{width:100%;height:100%;border-radius:8px;display:block;object-fit:cover}
   .item strong{font-size:16px;font-weight:600;letter-spacing:-.02em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .item .arrow{width:14px;height:14px;margin-left:auto;flex:none;opacity:.35;transition:transform .25s,opacity .25s}
   .item small{display:block;margin-bottom:var(--space-3);font-size:13px;line-height:1.55;color:var(--muted)}
   .meta{display:flex;flex-direction:column;gap:var(--space-1);align-self:start;padding-top:var(--space-2);border-top:1px dashed var(--line)}
-  .meta .row{display:grid;grid-template-columns:40px 1fr;gap:var(--space-2);align-items:baseline;font-size:11.5px;line-height:1.4}
-  .meta .k{font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A3A3A3}
+  .meta .row{display:grid;grid-template-columns:48px 1fr;gap:var(--space-2);align-items:baseline;font-size:12px;line-height:1.4}
+  .meta .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#A3A3A3}
   .meta .v{color:#3A3A3A;font-weight:500}
   .meta .v i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:var(--space-2);vertical-align:1px;background:#CFCFCF}
   .meta .mcp-of{color:#A1125F}.meta .mcp-of i{background:linear-gradient(135deg,var(--g2),var(--g4))}
@@ -124,33 +109,44 @@
   .item:hover .arrow{opacity:1;transform:translate(3px,-3px)}
   .item:focus-visible{outline:2px solid var(--ink);outline-offset:6px;border-radius:6px}
   .empty{display:none;text-align:center;color:var(--muted);padding:64px 0 0}
+  .about{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--space-5);border-top:1px solid var(--ink);padding-top:var(--space-4);padding-bottom:var(--space-6)}
+  .about h3{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
+  .about p{font-size:15px;line-height:1.6;color:var(--muted)}.about p+p{margin-top:var(--space-3)}
+  .about a,.legend .gl{color:var(--ink);text-underline-offset:4px}
+  .legend .gl{font-size:12px;margin-left:var(--space-2)}
+  .glossario{padding-top:var(--space-7)}
+  .terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4) var(--space-5)}
+  .terms>div{border-top:1px dashed var(--line);padding-top:var(--space-3)}
+  .terms dt{font-size:16px;font-weight:600;letter-spacing:-.02em;margin-bottom:var(--space-1)}
+  .terms dd{font-size:13px;line-height:1.55;color:var(--muted)}
+  footer a{color:#fff;text-underline-offset:3px}
   /* BAND */
   .band{background:linear-gradient(100deg,var(--g1) 0%,var(--g2) 30%,var(--g3) 55%,var(--g4) 78%,var(--g5) 100%);color:#fff;position:relative;overflow:hidden}
   .band::before{content:"";position:absolute;left:0;right:0;top:0;height:192px;background:linear-gradient(to bottom,#fff 0%,rgba(255,255,255,.85) 25%,rgba(255,255,255,.45) 55%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0}
   .band::after{content:"";position:absolute;width:520px;height:520px;right:-80px;bottom:-200px;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 65%);filter:blur(10px)}
   .band{margin-top:var(--space-7)}
   .band .container{padding-top:192px;padding-bottom:128px;position:relative;z-index:1}
-  .band .big{font-size:clamp(80px,18vw,240px);font-weight:800;letter-spacing:-.07em;line-height:.85;opacity:.95}
+  .band .big{font-size:clamp(56px,13vw,176px);font-weight:800;letter-spacing:-.07em;line-height:.85;opacity:.95}
   .band h3{font-size:clamp(28px,4vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1.05;margin-top:24px;max-width:700px}
   .band p{margin:var(--space-3) 0 var(--space-5);font-size:17px;max-width:460px;opacity:.9;line-height:1.5}
   .band .pill{border-color:#fff;color:#fff}
   .band .pill:hover{background:#fff;color:var(--ink)}
   footer{background:linear-gradient(100deg,#5e1480,#a8157a);color:rgba(255,255,255,.75);font-size:12px}
   footer .container{display:flex;justify-content:space-between;padding-top:var(--space-4);padding-bottom:var(--space-4);gap:var(--space-3);flex-wrap:wrap}
-  @media (max-width:960px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.links{display:none}}
+  @media (max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.terms{grid-template-columns:1fr}.links{display:none}}
   @media (max-width:720px){
     :root{--nav-h:64px}
     .container{padding-left:var(--space-3);padding-right:var(--space-3)}
     .intro{grid-template-columns:1fr;padding:var(--space-7) 0 var(--space-6)}.intro p{justify-self:start}
     .steps{grid-template-columns:1fr;gap:var(--space-4)}
     .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5) var(--space-3)}
-    .halo{height:440px}.phone{width:180px;height:360px}.screen .wm{top:80px;font-size:28px}
-    .search{flex:1 1 100%}
+    
+    .search{flex:1 1 100%}.about{grid-template-columns:1fr;gap:var(--space-3)}.about h3{font-size:24px}
     .legend b{flex-basis:100%;margin-right:0}
     .toolbar{padding:var(--space-2) 0}
     .cat-head{grid-template-columns:auto 1fr;gap:var(--space-3)}.cnt{display:none}.num{font-size:42px}.cat-head h3{font-size:24px}
   }
-  @media (prefers-reduced-motion:reduce){.phone{animation:none}.item{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+  @media (prefers-reduced-motion:reduce){.item{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -158,7 +154,7 @@
     <div class="container">
       <nav class="top">
         <a class="brand" href="#inicio" aria-label="NOVVO, início">NOVVO<span class="dot"></span></a>
-        <div class="links"><a href="#inspiracao">Inspiração</a><a href="#imagens">Imagens</a><a href="#icones">Ícones</a><a href="#fontes">Fontes</a><a href="#cores">Cores</a></div>
+        <div class="links"><a href="#inspiracao">Inspiração</a><a href="#imagens">Imagens</a><a href="#ilustracoes">Ilustrações</a><a href="#ferramentas">Ferramentas</a><a href="#glossario">Glossário</a></div>
       </nav>
     </div>
   </div>
@@ -167,23 +163,21 @@
     <section class="hero container">
       <span class="kicker serif">Do zero ao primeiro rascunho.</span>
       <h1>Todo Site Bom<br>Começa Aqui</h1>
-      <p>Inspiração, imagens grátis, ícones, fontes e cores reunidos num lugar só. Escolha, clique e comece seu próximo site com a NOVVO.</p>
+      <p>Inspiração, imagens, IA e ferramentas num lugar só.</p>
       <a class="pill" href="#biblioteca">Explorar a biblioteca <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="halo" aria-hidden="true">
-        <canvas id="phone3d" width="10" height="10"></canvas>
-        <div class="phone" id="phoneCss"><div class="screen"><div class="wm">NOVVO<small>seu site, do zero</small></div><div class="mini"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">M</text></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#222" d="m14.72 5.6-2.24 8.68-2.12-8.68H7.47l-2.12 8.68L3.11 5.6H0l4.01 12.65h2.74l2.17-8.18 2.16 8.18h2.74L17.83 5.6zm5.1 10.7c0 1.2.9 2.1 2.09 2.1 1.2 0 2.09-.9 2.09-2.1s-.9-2.12-2.1-2.12c-1.19 0-2.08.9-2.08 2.11"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4C89" d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1769FF" d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111" d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#05A081" d="M1.5 0A1.5 1.5 0 000 1.5v21A1.5 1.5 0 001.5 24h21a1.5 1.5 0 001.5-1.5v-21A1.5 1.5 0 0022.5 0h-21zm6.75 6.75h5.2715a3.843 3.843 0 01.627 7.6348V17.25H8.25V6.75zm1.5 1.5v7.5h2.8984v-2.8145h.873a2.343 2.343 0 100-4.6855H9.75Z"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2EC66D" d="M2 0a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm10.193 5.5h2.499l1.967 2.872L18.854 5.5h2.482l-3.579 4.592 3.91 4.813h-2.638l-2.395-3.064-2.15 3.064h-2.579l3.579-4.813zm-5.045.004c1.32.033 2.42.49 3.3 1.371.879.881 1.335 1.986 1.37 3.317-.035 1.331-.491 2.441-1.37 3.328-.88.887-1.98 1.346-3.3 1.38H4.346v3.768H2.5v-8.476c.032-1.33.486-2.436 1.359-3.317.873-.88 1.97-1.338 3.29-1.37Zm0 1.864c-.797.02-1.46.294-1.985.823-.525.53-.797 1.196-.817 2v2.847h2.802c.808-.019 1.476-.294 2.003-.826.528-.532.8-1.206.82-2.02-.02-.805-.292-1.47-.82-2-.527-.53-1.195-.805-2.003-.824Z"/></svg></span><span><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7AB55C" d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></span></div></div></div>
-      </div>
     </section>
 
     <section class="container" id="biblioteca">
       <div class="intro">
         <h2>Tudo que Você Precisa <span class="serif">Para Sair do Zero</span></h2>
-        <p>41 sites em 7 categorias, escolhidos a dedo. Clique em qualquer um e vá direto.</p>
+        <p>10 sites em 4 categorias, escolhidos a dedo. Clique em qualquer um e vá direto.</p>
       </div>
-      <div class="steps">
-        <div><b>1. Inspire-se</b><span>Junte 3 a 5 referências de layout do mesmo estilo antes de abrir qualquer editor.</span></div>
-        <div><b>2. Defina a identidade</b><span>Escolha 2 fontes e uma paleta de até 5 cores. Teste tudo junto antes de seguir.</span></div>
-        <div><b>3. Monte com recursos grátis</b><span>Imagens, ícones e ilustrações sem custo para o site sair do papel rápido.</span></div>
+      <div class="about">
+        <h3>Para que serve?</h3>
+        <div>
+          <p>A NOVVO é um ponto de partida para quem vai montar um site do zero. Em vez de dezenas de abas abertas, você encontra poucos sites bons, separados por tarefa: buscar inspiração de layout, achar imagens grátis, criar ilustrações e vídeos com IA e montar mockups.</p>
+          <p>Cada card mostra o custo e se a ferramenta se conecta a IAs (o tal MCP). Ficou alguma palavra estranha? <a href="#glossario">Veja o glossário</a>.</p>
+        </div>
       </div>
     </section>
 
@@ -191,211 +185,76 @@
       <div class="container">
         <label class="search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input id="q" type="search" placeholder="Buscar (ex.: fotos, ícones, paleta)" aria-label="Buscar sites">
+          <input id="q" type="search" placeholder="Buscar (ex.: fotos, IA, mockup)" aria-label="Buscar sites">
         </label>
-        <div class="chips" id="chips"><a class="chip" href="#inspiracao">Inspiração de layout</a><a class="chip" href="#imagens">Imagens grátis</a><a class="chip" href="#ilustracoes">Ilustrações, 3D e IA</a><a class="chip" href="#icones">Ícones</a><a class="chip" href="#fontes">Fontes e combinações</a><a class="chip" href="#cores">Cores e fundos</a><a class="chip" href="#ferramentas">Ferramentas e mockups</a></div>
+        <div class="chips" id="chips"><a class="chip" href="#inspiracao">Inspiração de layout</a><a class="chip" href="#imagens">Imagens grátis</a><a class="chip" href="#ilustracoes">Ilustrações e vídeos com IA</a><a class="chip" href="#ferramentas">Ferramentas e mockups</a><a class="chip" href="#glossario">Glossário</a></div>
       </div>
     </div>
 
-    <div class="legend container" aria-label="Legenda"><b>MCP para IA:</b><span><i class="l-of"></i>Oficial, da própria empresa</span><span><i class="l-te"></i>De terceiros (comunidade)</span><span><i></i>Sem MCP oficial</span></div>
+    <div class="legend container" aria-label="Legenda"><b>MCP para agentes de IA:</b><span><i class="l-of"></i>Oficial, da própria empresa</span><span><i class="l-te"></i>De terceiros (comunidade)</span><span><i></i>Sem MCP oficial</span><a class="gl" href="#glossario">O que é MCP?</a></div>
   <section class="cat container" id="inspiracao" data-cat="inspiracao">
-    <div class="cat-head"><span class="num serif">01</span><div><h3>Inspiração de layout</h3><p>Veja como os melhores sites e apps resolvem cada seção antes de desenhar a sua.</p></div><span class="cnt">10 sites</span></div>
+    <div class="cat-head"><span class="num serif">01</span><div><h3>Inspiração de layout</h3><p>Veja como os melhores sites e apps resolvem cada seção antes de desenhar a sua.</p></div><span class="cnt">4 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://mobbin.com" target="_blank" rel="noopener noreferrer" data-name="mobbin telas e fluxos reais de apps e sites. inspiração de layout grátis limitado + assinatura mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">M</text></svg></span><strong>Mobbin</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/mobbin.png" alt="" width="32" height="32" loading="lazy"></span><strong>Mobbin</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Telas e fluxos reais de apps e sites.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis limitado + assinatura</span></span></span>
       </a>
       <a class="item card" href="https://www.awwwards.com" target="_blank" rel="noopener noreferrer" data-name="awwwards sites premiados, julgados por designers. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#222" d="m14.72 5.6-2.24 8.68-2.12-8.68H7.47l-2.12 8.68L3.11 5.6H0l4.01 12.65h2.74l2.17-8.18 2.16 8.18h2.74L17.83 5.6zm5.1 10.7c0 1.2.9 2.1 2.09 2.1 1.2 0 2.09-.9 2.09-2.1s-.9-2.12-2.1-2.12c-1.19 0-2.08.9-2.08 2.11"/></svg></span><strong>Awwwards</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/awwwards.png" alt="" width="32" height="32" loading="lazy"></span><strong>Awwwards</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Sites premiados, julgados por designers.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
       </a>
       <a class="item card" href="https://dribbble.com" target="_blank" rel="noopener noreferrer" data-name="dribbble shots de interface, ícones e marcas. inspiração de layout grátis + assinatura pro mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4C89" d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/></svg></span><strong>Dribbble</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/dribbble.png" alt="" width="32" height="32" loading="lazy"></span><strong>Dribbble</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Shots de interface, ícones e marcas.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
       </a>
-      <a class="item card" href="https://www.behance.net" target="_blank" rel="noopener noreferrer" data-name="behance cases completos de projetos. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1769FF" d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></span><strong>Behance</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Cases completos de projetos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://land-book.com" target="_blank" rel="noopener noreferrer" data-name="land-book galeria de landing pages por estilo. inspiração de layout grátis + assinatura pro sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#3D5AFE"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Lb</text></svg></span><strong>Land-book</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Galeria de landing pages por estilo.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
-      </a>
-      <a class="item card" href="https://godly.website" target="_blank" rel="noopener noreferrer" data-name="godly sites com animação e visual ousado. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0B0B0B"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#E8FF5A">G</text></svg></span><strong>Godly</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Sites com animação e visual ousado.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.lapa.ninja" target="_blank" rel="noopener noreferrer" data-name="lapa ninja landing pages por categoria. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#16A34A"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">LN</text></svg></span><strong>Lapa Ninja</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Landing pages por categoria.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.siteinspire.com" target="_blank" rel="noopener noreferrer" data-name="siteinspire curadoria de sites por estilo e tipo. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#E4572E"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Si</text></svg></span><strong>SiteInspire</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Curadoria de sites por estilo e tipo.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://minimal.gallery" target="_blank" rel="noopener noreferrer" data-name="minimal gallery sites minimalistas escolhidos a dedo. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#F2F2F2"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#111">Mg</text></svg></span><strong>Minimal Gallery</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Sites minimalistas escolhidos a dedo.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
       <a class="item card" href="https://www.pinterest.com/search/pins/?q=website%20design" target="_blank" rel="noopener noreferrer" data-name="pinterest moodboards e referências rápidas. inspiração de layout grátis mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#E60023" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></span><strong>Pinterest</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/pinterest.png" alt="" width="32" height="32" loading="lazy"></span><strong>Pinterest</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Moodboards e referências rápidas.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
       </a>
     </div>
   </section>
   <section class="cat container" id="imagens" data-cat="imagens">
-    <div class="cat-head"><span class="num serif">02</span><div><h3>Imagens grátis</h3><p>Fotos e vídeos de alta qualidade para usar no site sem pagar.</p></div><span class="cnt">8 sites</span></div>
+    <div class="cat-head"><span class="num serif">02</span><div><h3>Imagens grátis</h3><p>Fotos e vídeos de alta qualidade para usar no site sem pagar.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://unsplash.com" target="_blank" rel="noopener noreferrer" data-name="unsplash fotos em alta, uso livre inclusive comercial. imagens grátis grátis + assinatura unsplash+ mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111" d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z"/></svg></span><strong>Unsplash</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/unsplash.png" alt="" width="32" height="32" loading="lazy"></span><strong>Unsplash</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Fotos em alta, uso livre inclusive comercial.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Unsplash+</span></span></span>
       </a>
       <a class="item card" href="https://www.pexels.com" target="_blank" rel="noopener noreferrer" data-name="pexels fotos e vídeos grátis, ótimo para hero em vídeo. imagens grátis grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#05A081" d="M1.5 0A1.5 1.5 0 000 1.5v21A1.5 1.5 0 001.5 24h21a1.5 1.5 0 001.5-1.5v-21A1.5 1.5 0 0022.5 0h-21zm6.75 6.75h5.2715a3.843 3.843 0 01.627 7.6348V17.25H8.25V6.75zm1.5 1.5v7.5h2.8984v-2.8145h.873a2.343 2.343 0 100-4.6855H9.75Z"/></svg></span><strong>Pexels</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/pexels.png" alt="" width="32" height="32" loading="lazy"></span><strong>Pexels</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Fotos e vídeos grátis, ótimo para hero em vídeo.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://pixabay.com" target="_blank" rel="noopener noreferrer" data-name="pixabay fotos, vetores, vídeos e músicas grátis. imagens grátis grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#2EC66D" d="M2 0a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm10.193 5.5h2.499l1.967 2.872L18.854 5.5h2.482l-3.579 4.592 3.91 4.813h-2.638l-2.395-3.064-2.15 3.064h-2.579l3.579-4.813zm-5.045.004c1.32.033 2.42.49 3.3 1.371.879.881 1.335 1.986 1.37 3.317-.035 1.331-.491 2.441-1.37 3.328-.88.887-1.98 1.346-3.3 1.38H4.346v3.768H2.5v-8.476c.032-1.33.486-2.436 1.359-3.317.873-.88 1.97-1.338 3.29-1.37Zm0 1.864c-.797.02-1.46.294-1.985.823-.525.53-.797 1.196-.817 2v2.847h2.802c.808-.019 1.476-.294 2.003-.826.528-.532.8-1.206.82-2.02-.02-.805-.292-1.47-.82-2-.527-.53-1.195-.805-2.003-.824Z"/></svg></span><strong>Pixabay</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fotos, vetores, vídeos e músicas grátis.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://burst.shopify.com" target="_blank" rel="noopener noreferrer" data-name="burst fotos de produto e negócios, da shopify. imagens grátis grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7AB55C" d="M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z"/></svg></span><strong>Burst</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fotos de produto e negócios, da Shopify.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://kaboompics.com" target="_blank" rel="noopener noreferrer" data-name="kaboompics fotos estilo lifestyle com paleta de cores. imagens grátis grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#C9A27E"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">K</text></svg></span><strong>Kaboompics</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fotos estilo lifestyle com paleta de cores.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://stocksnap.io" target="_blank" rel="noopener noreferrer" data-name="stocksnap fotos em domínio público (cc0). imagens grátis grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#1F2937"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">SS</text></svg></span><strong>StockSnap</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fotos em domínio público (CC0).</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://openverse.org" target="_blank" rel="noopener noreferrer" data-name="openverse busca em milhões de obras creative commons. imagens grátis grátis, com crédito ao autor sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#111" d="M4.882 1.018C2.182 1.018 0 3.214 0 5.932c0 2.704 2.182 4.915 4.882 4.915Zm7.118 0c-2.686 0-4.882 2.196-4.882 4.914 0 2.704 2.182 4.915 4.882 4.915zm7.118 0c-2.696 0-4.881 2.2-4.881 4.914 0 2.714 2.185 4.915 4.88 4.915 2.697 0 4.883-2.2 4.883-4.915 0-2.714-2.186-4.914-4.882-4.914zm0 12.093c-2.696 0-4.881 2.2-4.881 4.915 0 2.714 2.185 4.914 4.88 4.914 2.697 0 4.883-2.2 4.883-4.914 0-2.714-2.186-4.915-4.882-4.915ZM12 13.126c-2.686 0-4.882 2.196-4.882 4.9S9.3 22.94 12 22.94zm-7.118.04c-2.7 0-4.882 2.197-4.882 4.9 0 2.719 2.182 4.916 4.882 4.916Z"/></svg></span><strong>Openverse</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Busca em milhões de obras Creative Commons.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis, com crédito ao autor</span></span></span>
-      </a>
-      <a class="item card" href="https://www.freepik.com" target="_blank" rel="noopener noreferrer" data-name="freepik fotos, vetores e psds; o plano grátis pede crédito. imagens grátis grátis com crédito + assinatura com créditos de ia mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1273EB" d="M4.315 6.939c-.702.702-1.204 1.505-1.706 2.308l-.702-.402c-.1-.401-.602-.702-1.004-.702-.602.1-.903.502-.903 1.104 0 .501.502.903 1.004.803.1 0 .2 0 .3-.1l.703.4c-.401.904-.702 1.807-.803 2.81l1.204.201c.402-2.107 1.305-4.014 2.81-5.52Zm12.544 7.626c-1.204 0-2.107-1.003-2.107-2.107 0-1.204 1.004-2.107 2.107-2.107 1.205 0 2.108 1.003 2.108 2.107 0 1.204-.903 2.107-2.108 2.107zm-7.325 1.506a2.912 2.912 0 0 1-2.91-2.91c0-1.707 1.304-3.011 2.91-3.011a2.912 2.912 0 0 1 2.91 2.91c0 1.606-1.305 3.01-2.91 3.01zm3.311-10.337a9.422 9.422 0 0 0-9.433 9.434c0 .702.1 1.304.2 2.007 1.004.802 4.216 1.405 8.33 1.204 4.516-.301 8.23-1.505 10.437-3.412 0-.301 0-.602-.1-.903-.603-4.817-4.617-8.33-9.434-8.33Zm-.803 13.749c-.602 0-1.204.1-1.806.1-1.405 0-2.71-.1-3.914-.3-.602-.101-1.304-.302-2.007-.503 1.606 2.91 4.817 4.918 8.43 4.918 4.415 0 8.229-3.011 9.232-7.125a16.828 16.828 0 0 1-3.813 1.806c-1.806.602-3.914 1.003-6.122 1.104zM23.182 7.34c.501-.1.903-.502.803-1.104-.1-.502-.502-.903-1.004-.803-.502.1-.803.502-.803 1.004l-.702.602c-.703-.703-1.405-1.305-2.208-1.806l-.602 1.003a11.225 11.225 0 0 1 4.014 4.616l1.104-.501c-.402-.904-.903-1.706-1.505-2.51l.602-.601c.1.1.2.1.3.1zM12.845 3.326h-.803l-.1-1.004c.301-.2.502-.602.401-1.003-.1-.602-.602-1.104-1.204-1.004-.602.1-1.003.602-1.003 1.305.1.401.3.702.602.903l.1 1.004c-1.104.2-2.208.501-3.211 1.003l.502 1.104a10.425 10.425 0 0 1 4.616-1.104c.803 0 1.505.1 2.308.301l.2-1.204c-.702-.2-1.505-.301-2.408-.301Z"/></svg></span><strong>Freepik</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fotos, vetores e PSDs; o plano grátis pede crédito.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis com crédito + assinatura com créditos de IA</span></span></span>
       </a>
     </div>
   </section>
   <section class="cat container" id="ilustracoes" data-cat="ilustracoes">
-    <div class="cat-head"><span class="num serif">03</span><div><h3>Ilustrações, 3D e IA</h3><p>Para dar personalidade sem depender de foto, ou criar a imagem do zero.</p></div><span class="cnt">5 sites</span></div>
+    <div class="cat-head"><span class="num serif">03</span><div><h3>Ilustrações e Vídeos com IA</h3><p>Para dar personalidade sem depender de foto, ou criar imagem e vídeo do zero.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
-      <a class="item card" href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" data-name="midjourney gera imagens com ia a partir de texto. ilustrações, 3d e ia só assinatura, sem plano grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0B0B0B"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Mj</text></svg></span><strong>Midjourney</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <a class="item card" href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" data-name="midjourney gera imagens com ia a partir de texto. ilustrações e vídeos com ia só assinatura, sem plano grátis mcp terceiros" data-mcp="te">
+        <span class="head"><span class="logo"><img src="logos/midjourney.png" alt="" width="32" height="32" loading="lazy"></span><strong>Midjourney</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Gera imagens com IA a partir de texto.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Só assinatura, sem plano grátis</span></span></span>
       </a>
-      <a class="item card" href="https://undraw.co" target="_blank" rel="noopener noreferrer" data-name="undraw ilustrações svg com a cor da sua marca. ilustrações, 3d e ia grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#6C63FF"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">uD</text></svg></span><strong>unDraw</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ilustrações SVG com a cor da sua marca.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://storyset.com" target="_blank" rel="noopener noreferrer" data-name="storyset ilustrações animáveis; grátis com crédito. ilustrações, 3d e ia grátis com crédito + assinatura sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#FF725E"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">St</text></svg></span><strong>Storyset</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ilustrações animáveis; grátis com crédito.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis com crédito + assinatura</span></span></span>
-      </a>
-      <a class="item card" href="https://blush.design" target="_blank" rel="noopener noreferrer" data-name="blush ilustrações personalizáveis por coleção. ilustrações, 3d e ia grátis + assinatura pro sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#FF5A5F"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">B</text></svg></span><strong>Blush</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ilustrações personalizáveis por coleção.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
-      </a>
-      <a class="item card" href="https://3dicons.co" target="_blank" rel="noopener noreferrer" data-name="3dicons ícones 3d grátis em vários estilos. ilustrações, 3d e ia grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#7C3AED"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">3D</text></svg></span><strong>3dicons</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ícones 3D grátis em vários estilos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-    </div>
-  </section>
-  <section class="cat container" id="icones" data-cat="icones">
-    <div class="cat-head"><span class="num serif">04</span><div><h3>Ícones</h3><p>Conjuntos consistentes, leves e gratuitos para interface.</p></div><span class="cnt">5 sites</span></div>
-    <div class="grid">
-      <a class="item card" href="https://lucide.dev" target="_blank" rel="noopener noreferrer" data-name="lucide ícones de traço limpos, open source. ícones grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F56565" d="M18.483 1.123a1.09 1.09 0 0 0-.752.362 1.09 1.09 0 0 0 .088 1.54 11.956 11.956 0 0 1 4 8.946 7.62 7.62 0 0 1-7.637 7.636 7.62 7.62 0 0 1-7.637-7.636 3.255 3.255 0 0 1 3.273-3.273c1.82 0 3.273 1.45 3.273 3.273a1.09 1.09 0 0 0 1.09 1.09 1.09 1.09 0 0 0 1.092-1.09c0-3-2.455-5.455-5.455-5.455s-5.454 2.455-5.454 5.455c0 5.408 4.408 9.818 9.818 9.818 5.41 0 9.818-4.41 9.818-9.818A14.16 14.16 0 0 0 19.272 1.4a1.09 1.09 0 0 0-.789-.277ZM9.818 2.15C4.408 2.151 0 6.561 0 11.97a14.16 14.16 0 0 0 4.8 10.637 1.09 1.09 0 0 0 1.54-.096 1.09 1.09 0 0 0-.095-1.54 11.957 11.957 0 0 1-4.063-9 7.62 7.62 0 0 1 7.636-7.637 7.62 7.62 0 0 1 7.637 7.636 3.256 3.256 0 0 1-3.273 3.273 3.256 3.256 0 0 1-3.273-3.273 1.09 1.09 0 0 0-1.09-1.09 1.09 1.09 0 0 0-1.092 1.09c0 3 2.455 5.455 5.455 5.455s5.454-2.455 5.454-5.455c0-5.408-4.408-9.818-9.818-9.818z"/></svg></span><strong>Lucide</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ícones de traço limpos, open source.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://phosphoricons.com" target="_blank" rel="noopener noreferrer" data-name="phosphor seis pesos por ícone, muito versátil. ícones grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#1F1F1F"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Ph</text></svg></span><strong>Phosphor</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Seis pesos por ícone, muito versátil.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://heroicons.com" target="_blank" rel="noopener noreferrer" data-name="heroicons ícones dos criadores do tailwind. ícones grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0EA5E9"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">H</text></svg></span><strong>Heroicons</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ícones dos criadores do Tailwind.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://tabler.io/icons" target="_blank" rel="noopener noreferrer" data-name="tabler icons mais de 5 mil ícones grátis. ícones grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#206BC4"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Tb</text></svg></span><strong>Tabler Icons</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Mais de 5 mil ícones grátis.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://iconoir.com" target="_blank" rel="noopener noreferrer" data-name="iconoir ícones minimalistas, traço fino. ícones grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Io</text></svg></span><strong>Iconoir</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Ícones minimalistas, traço fino.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-    </div>
-  </section>
-  <section class="cat container" id="fontes" data-cat="fontes">
-    <div class="cat-head"><span class="num serif">05</span><div><h3>Fontes e combinações</h3><p>Tipografia é metade do visual. Comece por aqui.</p></div><span class="cnt">4 sites</span></div>
-    <div class="grid">
-      <a class="item card" href="https://fonts.google.com" target="_blank" rel="noopener noreferrer" data-name="google fonts centenas de fontes grátis para web. fontes e combinações grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M4 2.8A3.6 3.6 0 1 0 4 10a3.6 3.6 0 0 0 0-7.2zm7.6 0v18.4h7.2a5.2 5.2 0 1 1 0-10.4 4 4 0 1 1 0-8zm7.2 0v8a4 4 0 1 0 0-8zm0 8v10.4A5.2 5.2 0 0 0 24 16a5.2 5.2 0 0 0-5.2-5.2zm-7.7-7.206L0 21.199h8.8l2.3-3.64Z"/></svg></span><strong>Google Fonts</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Centenas de fontes grátis para web.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.fontshare.com" target="_blank" rel="noopener noreferrer" data-name="fontshare fontes de qualidade profissional, grátis. fontes e combinações grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Fs</text></svg></span><strong>Fontshare</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fontes de qualidade profissional, grátis.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.fontpair.co" target="_blank" rel="noopener noreferrer" data-name="fontpair pares de fontes do google que combinam. fontes e combinações grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#F59E0B"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Fp</text></svg></span><strong>Fontpair</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Pares de fontes do Google que combinam.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.typewolf.com" target="_blank" rel="noopener noreferrer" data-name="typewolf que fontes os melhores sites usam. fontes e combinações grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#B91C1C"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Tw</text></svg></span><strong>Typewolf</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Que fontes os melhores sites usam.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-    </div>
-  </section>
-  <section class="cat container" id="cores" data-cat="cores">
-    <div class="cat-head"><span class="num serif">06</span><div><h3>Cores e fundos</h3><p>Paletas, gradientes e fundos prontos para a identidade.</p></div><span class="cnt">5 sites</span></div>
-    <div class="grid">
-      <a class="item card" href="https://coolors.co" target="_blank" rel="noopener noreferrer" data-name="coolors gerador de paletas em segundos. cores e fundos grátis + assinatura pro sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#0066FF"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="11" font-weight="700" fill="#fff">C</text></svg></span><strong>Coolors</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Gerador de paletas em segundos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
-      </a>
-      <a class="item card" href="https://www.realtimecolors.com" target="_blank" rel="noopener noreferrer" data-name="realtime colors teste a paleta num site de verdade. cores e fundos grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Rc</text></svg></span><strong>Realtime Colors</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Teste a paleta num site de verdade.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://www.happyhues.co" target="_blank" rel="noopener noreferrer" data-name="happy hues paletas já aplicadas em layouts. cores e fundos grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#F582AE"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Hh</text></svg></span><strong>Happy Hues</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Paletas já aplicadas em layouts.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
-      </a>
-      <a class="item card" href="https://haikei.app" target="_blank" rel="noopener noreferrer" data-name="haikei fundos svg: ondas, blobs e gradientes. cores e fundos grátis + plano pago sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#FF5C35"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Hk</text></svg></span><strong>Haikei</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Fundos SVG: ondas, blobs e gradientes.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + plano pago</span></span></span>
-      </a>
-      <a class="item card" href="https://cssgradient.io" target="_blank" rel="noopener noreferrer" data-name="css gradient monte gradientes e copie o css. cores e fundos grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#8B5CF6"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Gr</text></svg></span><strong>CSS Gradient</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Monte gradientes e copie o CSS.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
+      <a class="item card" href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" data-name="higgsfield gera imagens e vídeos com ia, com vários modelos num só lugar. ilustrações e vídeos com ia créditos + assinatura mcp oficial" data-mcp="of">
+        <span class="head"><span class="logo"><img src="logos/higgsfield.png" alt="" width="32" height="32" loading="lazy"></span><strong>Higgsfield</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <small>Gera imagens e vídeos com IA, com vários modelos num só lugar.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Créditos + assinatura</span></span></span>
       </a>
     </div>
   </section>
   <section class="cat container" id="ferramentas" data-cat="ferramentas">
-    <div class="cat-head"><span class="num serif">07</span><div><h3>Ferramentas e mockups</h3><p>Para montar, apresentar e finalizar.</p></div><span class="cnt">4 sites</span></div>
+    <div class="cat-head"><span class="num serif">04</span><div><h3>Ferramentas e mockups</h3><p>Para montar, apresentar e finalizar.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://www.canva.com" target="_blank" rel="noopener noreferrer" data-name="canva artes, banners e logos rápidos. ferramentas e mockups grátis + assinatura pro mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#00C4CC"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Cv</text></svg></span><strong>Canva</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/canva.png" alt="" width="32" height="32" loading="lazy"></span><strong>Canva</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Artes, banners e logos rápidos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
       </a>
       <a class="item card" href="https://www.figma.com/community" target="_blank" rel="noopener noreferrer" data-name="figma community: templates e kits de ui grátis. ferramentas e mockups grátis + assinatura (mcp completo no pago) mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#F24E1E" d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg></span><strong>Figma</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/figma.png" alt="" width="32" height="32" loading="lazy"></span><strong>Figma</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Community: templates e kits de UI grátis.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura (MCP completo no pago)</span></span></span>
       </a>
-      <a class="item card" href="https://shots.so" target="_blank" rel="noopener noreferrer" data-name="shots mockups bonitos do seu site em segundos. ferramentas e mockups grátis + assinatura sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#111"/><text x="12" y="16.2" text-anchor="middle" font-family="Figtree,Arial,sans-serif" font-size="9" font-weight="700" fill="#fff">Sh</text></svg></span><strong>Shots</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Mockups bonitos do seu site em segundos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura</span></span></span>
-      </a>
-      <a class="item card" href="https://www.remove.bg" target="_blank" rel="noopener noreferrer" data-name="remove.bg remove o fundo de fotos automaticamente. ferramentas e mockups créditos ou assinatura mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#54616C" d="m23.729 13.55-1.903-.995-9.134 4.776a1.497 1.497 0 0 1-1.383.002l-9.137-4.778-1.903.995a.5.5 0 0 0 0 .888l11.499 6.011a.495.495 0 0 0 .462 0l11.499-6.011a.5.5 0 0 0 0-.888zM.269 10.447l11.499 6.013a.495.495 0 0 0 .462 0l11.499-6.013a.5.5 0 0 0 0-.887l-11.5-6.012a.505.505 0 0 0-.462 0L.268 9.559a.5.5 0 0 0 .001.887z"/></svg></span><strong>remove.bg</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <small>Remove o fundo de fotos automaticamente.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Créditos ou assinatura</span></span></span>
-      </a>
     </div>
+  </section>
+  <section class="glossario container" id="glossario">
+    <div class="cat-head"><span class="num serif">05</span><div><h3>Glossário</h3><p>As palavras que aparecem aqui no site, explicadas sem complicação.</p></div><span class="cnt">10 termos</span></div>
+    <dl class="terms"><div><dt>MCP</dt><dd>Conector que permite a uma IA, como o Claude, usar uma ferramenta por você: buscar imagens, abrir arquivos, editar um design. Nos cards, “Oficial” foi feito pela própria empresa, “De terceiros” foi feito pela comunidade e “Sem MCP oficial” ainda não existe.</dd></div><div><dt>Agentes de IA</dt><dd>IAs que não só respondem, mas executam tarefas por você, usando ferramentas para buscar, criar e editar. É por isso que cada card mostra se o site tem MCP.</dd></div><div><dt>UI e UX</dt><dd>UI é a aparência: cores, botões e telas. UX é a experiência de uso: se a pessoa acha o que procura com facilidade.</dd></div><div><dt>Layout</dt><dd>O jeito como os elementos ficam distribuídos na página. Os sites de Inspiração mostram layouts reais.</dd></div><div><dt>Hero</dt><dd>A primeira seção do site, a que aparece antes de rolar a página, com título, frase de apoio e botão. Costuma ter uma foto ou um vídeo de fundo.</dd></div><div><dt>Mockup</dt><dd>Simulação do design pronto dentro de um celular ou notebook, usada para apresentar o site ao cliente.</dd></div><div><dt>Moodboard</dt><dd>Painel de referências visuais (cores, fotos, sites) que define o clima do projeto. O Pinterest é muito usado para isso.</dd></div><div><dt>Template e kit</dt><dd>Modelos prontos para editar, como os kits de UI da comunidade do Figma.</dd></div><div><dt>Shots</dt><dd>Como o Dribbble chama as prévias de design que os designers publicam.</dd></div><div><dt>Custo</dt><dd>“Grátis” não cobra nada. “Assinatura” pede um plano pago. “Crédito” cobra por uso, como em gerar imagens e vídeos com IA.</dd></div></dl>
   </section>
     <p class="empty container" id="empty">Nenhum site encontrado para essa busca.</p>
 
@@ -408,7 +267,7 @@
       </div>
     </section>
   </main>
-  <footer><div class="container"><span>© NOVVO · Do zero ao Rascunho</span></div></footer>
+  <footer><div class="container"><span>© NOVVO · Do zero ao Rascunho</span><span>Criado por <a href="https://x.com/_wellingtongg" target="_blank" rel="noopener noreferrer">@_wellingtongg</a></span></div></footer>
 
 <script>
   const items=[...document.querySelectorAll('.item')];
@@ -422,16 +281,18 @@
   const q=document.getElementById('q'),empty=document.getElementById('empty'),secs=[...document.querySelectorAll('.cat')];
   q.addEventListener('input',()=>{const v=q.value.trim().toLowerCase();let total=0;
     secs.forEach(s=>{let n=0;s.querySelectorAll('.item').forEach(c=>{const ok=!v||c.dataset.name.includes(v);c.style.display=ok?'':'none';if(ok){n++;reveal(c)}});s.style.display=n?'':'none';total+=n});
-    empty.style.display=total?'none':'block';if(typeof spy==='function')spy();});
+    gloss.style.display=v?'none':'';empty.style.display=total?'none':'block';if(typeof spy==='function')spy();});
   const chips=[...document.querySelectorAll('.chip')];
   const bar=document.querySelector('.toolbar');
+  const setTb=()=>document.documentElement.style.setProperty('--toolbar-h',bar.offsetHeight+'px');setTb();addEventListener('resize',setTb);
+  const gloss=document.getElementById('glossario'),navSecs=[...document.querySelectorAll('.cat,#glossario')];
   let lockId=null,lockTimer=null;
   function setActive(id){chips.forEach(c=>{const on=c.getAttribute('href')==='#'+id;c.classList.toggle('on',on);
     if(on){const box=c.parentNode;const l=c.offsetLeft-box.offsetLeft;if(l<box.scrollLeft||l+c.offsetWidth>box.scrollLeft+box.clientWidth)box.scrollLeft=l-16}})}
   function spy(){
     if(lockId)return;
-    const vis=secs.filter(s=>s.style.display!=='none');
-    const line=bar.getBoundingClientRect().bottom+24;
+    const vis=navSecs.filter(s=>s.style.display!=='none');
+    const line=bar.getBoundingClientRect().bottom+40;
     let cur=null;
     vis.forEach(s=>{if(s.getBoundingClientRect().top<=line)cur=s});
     if(innerHeight+scrollY>=document.documentElement.scrollHeight-4&&vis.length){const last=vis[vis.length-1];if(last.getBoundingClientRect().top<innerHeight)cur=last}
@@ -452,82 +313,5 @@
   document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==q){e.preventDefault();q.focus()}});
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-(function(){
-  const halo=document.querySelector('.halo'),cv=document.getElementById('phone3d');
-  if(!window.THREE||!cv)return;
-  let renderer;
-  try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});}catch(e){return}
-  const ASSETS={"logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-12 -991 3911 1083\">\n<title>NOVVO<\/title><defs><linearGradient id=\"g\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0\" stop-color=\"#D61C8C\"/><stop offset=\"1\" stop-color=\"#FF8A3D\"/><\/linearGradient>\n<mask id=\"m\" maskUnits=\"userSpaceOnUse\" x=\"-12\" y=\"-991\" width=\"3911\" height=\"1083\"><rect x=\"-12\" y=\"-991\" width=\"3911\" height=\"1083\" fill=\"#fff\"/><circle cx=\"3579\" cy=\"-671\" r=\"240\" fill=\"#000\"/><\/mask><\/defs>\n<g mask=\"url(#m)\"><g fill=\"#FFFFFF\" transform=\"scale(1 -1)\"><path transform=\"translate(0.0 0)\" d=\"M68 0V700H237L544 273V700H705V0H544L229 439V0Z\"/><path transform=\"translate(733.0 0)\" d=\"M398 -12Q290 -12 207.0 34.5Q124 81 77.0 162.5Q30 244 30 349Q30 455 77.0 536.5Q124 618 206.5 664.5Q289 711 396 711Q503 711 585.5 664.5Q668 618 715.0 536.5Q762 455 762 349Q762 244 715.5 162.5Q669 81 587.0 34.5Q505 -12 398 -12ZM398 136Q457 136 502.0 163.0Q547 190 572.0 238.5Q597 287 597 349Q597 412 571.0 460.5Q545 509 500.0 536.5Q455 564 396 564Q337 564 292.0 536.5Q247 509 221.0 460.5Q195 412 195 349Q195 287 221.0 238.5Q247 190 293.0 163.0Q339 136 398 136Z\"/><path transform=\"translate(1485.0 0)\" d=\"M282 0 8 700H181L369 193L555 700H729L456 0Z\"/><path transform=\"translate(2181.0 0)\" d=\"M282 0 8 700H181L369 193L555 700H729L456 0Z\"/><path transform=\"translate(2877.0 0)\" d=\"M398 -12Q290 -12 207.0 34.5Q124 81 77.0 162.5Q30 244 30 349Q30 455 77.0 536.5Q124 618 206.5 664.5Q289 711 396 711Q503 711 585.5 664.5Q668 618 715.0 536.5Q762 455 762 349Q762 244 715.5 162.5Q669 81 587.0 34.5Q505 -12 398 -12ZM398 136Q457 136 502.0 163.0Q547 190 572.0 238.5Q597 287 597 349Q597 412 571.0 460.5Q545 509 500.0 536.5Q455 564 396 564Q337 564 292.0 536.5Q247 509 221.0 460.5Q195 412 195 349Q195 287 221.0 238.5Q247 190 293.0 163.0Q339 136 398 136Z\"/><\/g><\/g>\n<circle cx=\"3579\" cy=\"-671\" r=\"240\" fill=\"url(#g)\"/><\/svg>", "icons": ["<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"24\" height=\"24\" rx=\"6\" fill=\"#111\"/><text x=\"12\" y=\"16.2\" text-anchor=\"middle\" font-family=\"Figtree,Arial,sans-serif\" font-size=\"11\" font-weight=\"700\" fill=\"#fff\">M<\/text><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#222\" d=\"m14.72 5.6-2.24 8.68-2.12-8.68H7.47l-2.12 8.68L3.11 5.6H0l4.01 12.65h2.74l2.17-8.18 2.16 8.18h2.74L17.83 5.6zm5.1 10.7c0 1.2.9 2.1 2.09 2.1 1.2 0 2.09-.9 2.09-2.1s-.9-2.12-2.1-2.12c-1.19 0-2.08.9-2.08 2.11\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#EA4C89\" d=\"M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.814zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#1769FF\" d=\"M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#111\" d=\"M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#05A081\" d=\"M1.5 0A1.5 1.5 0 000 1.5v21A1.5 1.5 0 001.5 24h21a1.5 1.5 0 001.5-1.5v-21A1.5 1.5 0 0022.5 0h-21zm6.75 6.75h5.2715a3.843 3.843 0 01.627 7.6348V17.25H8.25V6.75zm1.5 1.5v7.5h2.8984v-2.8145h.873a2.343 2.343 0 100-4.6855H9.75Z\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#2EC66D\" d=\"M2 0a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm10.193 5.5h2.499l1.967 2.872L18.854 5.5h2.482l-3.579 4.592 3.91 4.813h-2.638l-2.395-3.064-2.15 3.064h-2.579l3.579-4.813zm-5.045.004c1.32.033 2.42.49 3.3 1.371.879.881 1.335 1.986 1.37 3.317-.035 1.331-.491 2.441-1.37 3.328-.88.887-1.98 1.346-3.3 1.38H4.346v3.768H2.5v-8.476c.032-1.33.486-2.436 1.359-3.317.873-.88 1.97-1.338 3.29-1.37Zm0 1.864c-.797.02-1.46.294-1.985.823-.525.53-.797 1.196-.817 2v2.847h2.802c.808-.019 1.476-.294 2.003-.826.528-.532.8-1.206.82-2.02-.02-.805-.292-1.47-.82-2-.527-.53-1.195-.805-2.003-.824Z\"/><\/svg>", "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"96\" height=\"96\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"#7AB55C\" d=\"M15.337 23.979l7.216-1.561s-2.604-17.613-2.625-17.73c-.018-.116-.114-.192-.211-.192s-1.929-.136-1.929-.136-1.275-1.274-1.439-1.411c-.045-.037-.075-.057-.121-.074l-.914 21.104h.023zM11.71 11.305s-.81-.424-1.774-.424c-1.447 0-1.504.906-1.504 1.141 0 1.232 3.24 1.715 3.24 4.629 0 2.295-1.44 3.76-3.406 3.76-2.354 0-3.54-1.465-3.54-1.465l.646-2.086s1.245 1.066 2.28 1.066c.675 0 .975-.545.975-.932 0-1.619-2.654-1.694-2.654-4.359-.034-2.237 1.571-4.416 4.827-4.416 1.257 0 1.875.361 1.875.361l-.945 2.715-.02.01zM11.17.83c.136 0 .271.038.405.135-.984.465-2.064 1.639-2.508 3.992-.656.213-1.293.405-1.889.578C7.697 3.75 8.951.84 11.17.84V.83zm1.235 2.949v.135c-.754.232-1.583.484-2.394.736.466-1.777 1.333-2.645 2.085-2.971.193.501.309 1.176.309 2.1zm.539-2.234c.694.074 1.141.867 1.429 1.755-.349.114-.735.231-1.158.366v-.252c0-.752-.096-1.371-.271-1.871v.002zm2.992 1.289c-.02 0-.06.021-.078.021s-.289.075-.714.21c-.423-1.233-1.176-2.37-2.508-2.37h-.115C12.135.209 11.669 0 11.265 0 8.159 0 6.675 3.877 6.21 5.846c-1.194.365-2.063.636-2.16.674-.675.213-.694.232-.772.87-.075.462-1.83 14.063-1.83 14.063L15.009 24l.927-21.166z\"/><\/svg>"]};
-  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  renderer.outputEncoding=THREE.sRGBEncoding;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
-  const scene=new THREE.Scene();
-  const cam=new THREE.PerspectiveCamera(30,1,0.1,50);cam.position.set(0,0,4.9);
-  // ambiente para o metal refletir (estúdio branco com brilho rosa/laranja)
-  const env=document.createElement('canvas');env.width=512;env.height=256;const ex=env.getContext('2d');
-  let g=ex.createLinearGradient(0,0,0,256);g.addColorStop(0,'#ffffff');g.addColorStop(.55,'#d9d9de');g.addColorStop(1,'#8d8d95');ex.fillStyle=g;ex.fillRect(0,0,512,256);
-  [['rgba(214,28,140,.9)',120,130],['rgba(255,138,61,.9)',380,120],['rgba(255,255,255,1)',250,60]].forEach(([c,x,y])=>{const r=ex.createRadialGradient(x,y,0,x,y,90);r.addColorStop(0,c);r.addColorStop(1,'rgba(0,0,0,0)');ex.fillStyle=r;ex.fillRect(0,0,512,256)});
-  const envTex=new THREE.CanvasTexture(env);envTex.mapping=THREE.EquirectangularReflectionMapping;envTex.encoding=THREE.sRGBEncoding;
-  const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromEquirectangular(envTex).texture;
-  scene.add(new THREE.HemisphereLight(0xffffff,0xffe0ec,.6));
-  const key=new THREE.DirectionalLight(0xffffff,1.1);key.position.set(2,3,4);scene.add(key);
-  const pink=new THREE.PointLight(0xd61c8c,1.4,8);pink.position.set(-2.2,-.6,1.6);scene.add(pink);
-  const orange=new THREE.PointLight(0xff8a3d,1.2,8);orange.position.set(2.2,.8,1.4);scene.add(orange);
-  // geometria
-  const W=.74,H=1.5,R=.13,D=.06,BEV=.022;
-  function rr(w,h,r){const s=new THREE.Shape(),x=-w/2,y=-h/2;s.moveTo(x+r,y);s.lineTo(x+w-r,y);s.quadraticCurveTo(x+w,y,x+w,y+r);s.lineTo(x+w,y+h-r);s.quadraticCurveTo(x+w,y+h,x+w-r,y+h);s.lineTo(x+r,y+h);s.quadraticCurveTo(x,y+h,x,y+h-r);s.lineTo(x,y+r);s.quadraticCurveTo(x,y,x+r,y);return s}
-  function planeUV(geo){geo.computeBoundingBox();const b=geo.boundingBox,p=geo.attributes.position,uv=geo.attributes.uv;for(let i=0;i<p.count;i++){uv.setXY(i,(p.getX(i)-b.min.x)/(b.max.x-b.min.x),(p.getY(i)-b.min.y)/(b.max.y-b.min.y))}uv.needsUpdate=true;return geo}
-  const phone=new THREE.Group();
-  const body=new THREE.ExtrudeGeometry(rr(W-2*BEV,H-2*BEV,R-BEV),{depth:D,bevelEnabled:true,bevelThickness:BEV,bevelSize:BEV,bevelSegments:6,curveSegments:24});body.translate(0,0,-D/2);
-  const frameMat=new THREE.MeshStandardMaterial({color:0xcfd0d6,metalness:.92,roughness:.24});
-  phone.add(new THREE.Mesh(body,frameMat));
-  // vidro preto da frente (borda da tela)
-  const glass=new THREE.Mesh(new THREE.ShapeGeometry(rr(W-.03,H-.03,R-.015),24),new THREE.MeshStandardMaterial({color:0x050505,metalness:.2,roughness:.08}));glass.position.z=D/2+BEV+.0005;phone.add(glass);
-  // tela com textura desenhada
-  const SW=W-.075,SH=H-.075;const tc=document.createElement('canvas');tc.width=1024;tc.height=Math.round(1024*SH/SW);const c=tc.getContext('2d');
-  const scrTex=new THREE.CanvasTexture(tc);scrTex.encoding=THREE.sRGBEncoding;scrTex.anisotropy=renderer.capabilities.getMaxAnisotropy();
-  const screen=new THREE.Mesh(planeUV(new THREE.ShapeGeometry(rr(SW,SH,R-.04),24)),new THREE.MeshBasicMaterial({map:scrTex,toneMapped:false}));screen.position.z=D/2+BEV+.001;phone.add(screen);
-  function blob(x,y,r,col){const gg=c.createRadialGradient(x,y,0,x,y,r);gg.addColorStop(0,col);gg.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=gg;c.fillRect(0,0,tc.width,tc.height)}
-  function img(src){return new Promise(res=>{const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(src)})}
-  async function paint(){
-    const w=tc.width,h=tc.height;const lg=c.createLinearGradient(0,0,w*.4,h);lg.addColorStop(0,'#D61C8C');lg.addColorStop(1,'#4B1A9A');c.fillStyle=lg;c.fillRect(0,0,w,h);
-    blob(w*.3,h*.25,w*.75,'rgba(255,138,61,.95)');blob(w*.85,h*.42,w*.7,'rgba(59,43,214,.8)');blob(w*.4,h*.92,w*.8,'rgba(207,214,232,.85)');blob(w*.7,h*.12,w*.45,'rgba(255,226,77,.45)');
-    c.fillStyle='#050505';const pw=w*.3,ph=w*.085;c.beginPath();c.roundRect?c.roundRect((w-pw)/2,w*.045,pw,ph,ph/2):c.rect((w-pw)/2,w*.045,pw,ph);c.fill();
-    const logo=await img(ASSETS.logo);if(logo){const lw=w*.62,lh=lw*logo.height/logo.width;c.save();c.shadowColor='rgba(0,0,0,.25)';c.shadowBlur=30;c.drawImage(logo,(w-lw)/2,h*.24,lw,lh);c.restore();
-      c.fillStyle='rgba(255,255,255,.92)';c.font='italic 52px "Instrument Serif", Georgia, serif';c.textAlign='center';c.fillText('seu site, do zero',w/2,h*.24+lh+70)}
-    const icons=await Promise.all(ASSETS.icons.map(img));const cols=4,gap=w*.06,pad=w*.08,sz=(w-2*pad-(cols-1)*gap)/cols;
-    icons.forEach((im,i)=>{const x=pad+(i%cols)*(sz+gap),y=h-pad*1.4-(2-Math.floor(i/cols))*(sz+gap)+gap;c.save();c.shadowColor='rgba(0,0,0,.18)';c.shadowBlur=24;c.shadowOffsetY=8;c.fillStyle='rgba(255,255,255,.94)';c.beginPath();c.roundRect?c.roundRect(x,y,sz,sz,sz*.24):c.rect(x,y,sz,sz);c.fill();c.restore();if(im)c.drawImage(im,x+sz*.2,y+sz*.2,sz*.6,sz*.6)});
-    scrTex.needsUpdate=true;
-  }
-  // traseira: módulo de câmera
-  const back=new THREE.Mesh(new THREE.ShapeGeometry(rr(W-.03,H-.03,R-.015),24),new THREE.MeshStandardMaterial({color:0xe9e9ee,metalness:.3,roughness:.35}));back.rotation.y=Math.PI;back.position.z=-(D/2+BEV+.0005);phone.add(back);
-  const isl=new THREE.Mesh(new THREE.ExtrudeGeometry(rr(.3,.3,.07),{depth:.012,bevelEnabled:true,bevelThickness:.006,bevelSize:.006,bevelSegments:3}),new THREE.MeshStandardMaterial({color:0xdcdce2,metalness:.6,roughness:.2}));isl.rotation.y=Math.PI;isl.position.set(W/2-.2,H/2-.2,-(D/2+BEV+.001));phone.add(isl);
-  [[-.065,.065],[-.065,-.065],[.065,0]].forEach(([dx,dy])=>{const l=new THREE.Mesh(new THREE.CylinderGeometry(.045,.05,.025,32),new THREE.MeshStandardMaterial({color:0x111114,metalness:.5,roughness:.1}));l.rotation.x=Math.PI/2;l.position.set(W/2-.2-dx,H/2-.2+dy,-(D/2+BEV+.03));phone.add(l)});
-  // botões laterais
-  [[ W/2+.004,.28,.22],[-W/2-.004,.36,.1],[-W/2-.004,.18,.16],[-W/2-.004,.0,.16]].forEach(([x,y,h])=>{const bt=new THREE.Mesh(new THREE.BoxGeometry(.012,h,.03),frameMat);bt.position.set(x,y,0);phone.add(bt)});
-  const tilt=new THREE.Group();tilt.rotation.z=-14*Math.PI/180;tilt.add(phone);scene.add(tilt);
-  // tamanho
-  function size(){const r=cv.getBoundingClientRect();renderer.setSize(r.width,r.height,false);cam.aspect=r.width/r.height;cam.updateProjectionMatrix()}
-  size();addEventListener('resize',size);
-  // interação: segue o mouse e dá para girar arrastando
-  let tx=0,ty=0,drag=null,spin=0,vel=0;
-  addEventListener('pointermove',e=>{if(drag===null){tx=(e.clientX/innerWidth-.5)*.5;ty=(e.clientY/innerHeight-.5)*.3}});
-  cv.addEventListener('pointerdown',e=>{drag=e.clientX;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
-  cv.addEventListener('pointermove',e=>{if(drag!==null){vel=(e.clientX-drag)*.012;spin+=vel;drag=e.clientX}});
-  const up=()=>{drag=null;cv.style.cursor='grab'};cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
-  let visible=true;new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(cv);
-  const clock=new THREE.Clock();
-  function loop(){requestAnimationFrame(loop);if(!visible)return;const t=clock.getElapsedTime();
-    if(drag===null){vel*=.94;spin+=vel;spin*=.985}
-    const sway=reduce?0:Math.sin(t*.6)*.22;
-    phone.rotation.y+=((sway+tx+spin)-phone.rotation.y)*.08;phone.rotation.x+=((ty*.6)-phone.rotation.x)*.08;
-    phone.position.y=reduce?0:Math.sin(t*1.05)*.04;
-    renderer.render(scene,cam)}
-  paint().then(()=>{halo.classList.add('has3d');window.__phone3dReady=true});loop();
-})();
-</script>
 </body>
 </html>
