@@ -4,6 +4,27 @@ Cada versão corresponde a uma publicação do site. A versão mais nova fica no
 O site está na fase 0.x, em construção. A versão 1.0 chega quando ele estiver pronto.
 Página no ar: https://novvo-ideias.vercel.app/changelog.html
 
+## v0.5 · 25/11/2026 · Fontes novas e revisão de acessibilidade
+
+[Pull request #3](https://github.com/Cronos-noble/Novvo-ideias/pull/3)
+
+**Alterado**
+- Fontes novas: Syne nos títulos e na marca, DM Sans nos textos e Libre Baskerville nos destaques em itálico.
+- Exemplo da busca agora é "Buscar: fotos, IA, mockup…".
+- Chips de categoria um pouco mais compactos.
+- Aspas tipográficas na página de histórico.
+
+**Adicionado**
+- Atalho "Pular para os sites" para quem navega pelo teclado.
+- A busca avisa leitores de tela quantos sites encontrou.
+- Degradê na borda dos chips quando há mais opções para os lados.
+
+**Corrigido**
+- Títulos sem palavra sozinha na última linha.
+- O Google Tradutor não traduz mais "NOVVO" nem os nomes dos sites.
+- Ícones decorativos dos botões não são mais lidos em voz alta.
+- Toque mais rápido no celular, barra do navegador branca e fontes carregando mais cedo.
+
 ## v0.4 · 22/11/2026 · Ajustes de uso, acessibilidade e compartilhamento
 
 [Ver mudanças no GitHub](https://github.com/Cronos-noble/Novvo-ideias/compare/383e14f...2310cd1) · [Pull request #2](https://github.com/Cronos-noble/Novvo-ideias/pull/2)

@@ -23,16 +23,25 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
   :root{--space-1:4px;--space-2:8px;--space-3:16px;--space-4:24px;--space-5:32px;--space-6:48px;--space-7:64px;--nav-h:88px;
     --ink:#0B0B0B;--muted:#6E6E6E;--line:#ECECEC;--bg:#FFFFFF;--g1:#7A1FA2;--g2:#D61C8C;--g3:#F0577A;--g4:#FF8A3D;--g5:#FFE24D}
   *{box-sizing:border-box;margin:0;padding:0}
+  :root{color-scheme:light}
+  html{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  h1,h2,h3{text-wrap:balance}
+  .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:50%;transform:translateX(-50%);top:-56px;z-index:40;background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:13px;font-weight:600;text-decoration:none;transition:top .2s}
+  .skip:focus-visible{top:calc(var(--nav-h) / 2 - 20px);outline:2px solid #fff;outline-offset:-5px}
   html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + var(--toolbar-h,73px) + 24px)}
   html,body{overflow-x:clip}
-  body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
-  .serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+  body{font-family:"DM Sans",system-ui,sans-serif;font-variant-numeric:lining-nums;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.brand,.big{font-family:Syne,system-ui,sans-serif}
+  .serif{font-family:"Libre Baskerville",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
   .container{max-width:1120px;margin:0 auto;padding:0 32px}
   a{color:inherit}
   /* NAV */
@@ -71,7 +80,10 @@
   .search input{border:0;outline:0;font:inherit;font-size:14px;width:100%;background:transparent;color:var(--ink)}
   .chips{display:flex;align-items:center;gap:var(--space-2);overflow-x:auto;scrollbar-width:none;flex:1}
   .chips::-webkit-scrollbar{display:none}
-  .chip{display:inline-flex;align-items:center;height:32px;font-size:12px;line-height:16px;font-weight:500;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:0 var(--space-3);white-space:nowrap;transition:border-color .2s,background .2s}
+  .chips.mais-d{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent)}
+  .chips.mais-e{-webkit-mask-image:linear-gradient(to left,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(to left,#000 calc(100% - 48px),transparent)}
+  .chips.mais-e.mais-d{-webkit-mask-image:linear-gradient(to right,transparent,#000 48px,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(to right,transparent,#000 48px,#000 calc(100% - 48px),transparent)}
+  .chip{display:inline-flex;align-items:center;height:32px;font-size:12px;line-height:16px;font-weight:500;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:0 14px;white-space:nowrap;transition:border-color .2s,background .2s}
   .chip{cursor:pointer;background:#fff;color:var(--ink)}
   .chip:hover{border-color:var(--ink);background:#F4F4F4}
   .chip.on:hover{background:#2a2a2a}
@@ -79,7 +91,7 @@
   /* CATEGORIES */
   .cat{padding-top:var(--space-7)}
   .cat-head{display:grid;grid-template-columns:auto 1fr auto;gap:var(--space-4);align-items:end;padding-bottom:var(--space-4);margin-bottom:var(--space-5);border-bottom:1px solid var(--line)}
-  .num{min-width:56px;font-size:52px;line-height:.8;background:linear-gradient(120deg,var(--g2),var(--g4));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:4px}
+  .num{min-width:76px;font-size:52px;line-height:.8;background:linear-gradient(120deg,var(--g2),var(--g4));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:4px}
   .cat-head h3{font-size:30px;font-weight:600;letter-spacing:-.035em;line-height:1.1}
   .cat-head p{font-size:14px;color:var(--muted);margin-top:var(--space-1)}
   .cnt{font-size:12px;color:var(--muted)}
@@ -128,7 +140,7 @@
   .band::after{content:"";position:absolute;width:520px;height:520px;right:-80px;bottom:-200px;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 65%);filter:blur(10px)}
   .band{margin-top:var(--space-7)}
   .band .container{padding-top:192px;padding-bottom:128px;position:relative;z-index:1}
-  .band .big{font-size:clamp(56px,13vw,176px);font-weight:800;letter-spacing:-.07em;line-height:.85;opacity:.95}
+  .band .big{font-size:clamp(32px,12.5vw,176px);font-weight:800;letter-spacing:-.07em;line-height:.85;opacity:.95}
   .band h3{font-size:clamp(28px,4vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1.05;margin-top:24px;max-width:700px}
   .band p{margin:var(--space-3) 0 var(--space-5);font-size:17px;max-width:460px;opacity:.9;line-height:1.5}
   .band .pill{border-color:#fff;color:#fff}
@@ -146,7 +158,7 @@
     .search{flex:1 1 100%}.about{grid-template-columns:1fr;gap:var(--space-3)}.about h3{font-size:24px}
     .legend b{flex-basis:100%;margin-right:0}
     .toolbar{padding:var(--space-2) 0}
-    .cat-head{grid-template-columns:auto 1fr;gap:var(--space-3)}.cnt{display:none}.num{font-size:42px}.cat-head h3{font-size:24px}
+    .cat-head{grid-template-columns:auto 1fr;gap:var(--space-3)}.cnt{display:none}.num{font-size:42px;min-width:62px}.cat-head h3{font-size:24px}
   }
   @media (prefers-reduced-motion:reduce){.item{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
   @media (max-width:360px){.item .arrow{display:none}}
@@ -154,10 +166,11 @@
 <noscript><style>.item{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
+  <a class="skip" href="#inspiracao">Pular para os sites</a>
   <div class="navwrap" id="navwrap">
     <div class="container">
       <nav class="top">
-        <a class="brand" href="#inicio" aria-label="NOVVO, início">NOVVO<span class="dot"></span></a>
+        <a class="brand" href="#inicio" aria-label="NOVVO, início" translate="no">NOVVO<span class="dot"></span></a>
         <div class="links"><a href="#inspiracao">Inspiração</a><a href="#imagens">Imagens</a><a href="#ilustracoes">Ilustrações</a><a href="#ferramentas">Ferramentas</a><a href="#glossario">Glossário</a></div>
       </nav>
     </div>
@@ -168,7 +181,7 @@
       <span class="kicker serif">Do zero ao primeiro rascunho.</span>
       <h1>Todo Site Bom<br>Começa Aqui</h1>
       <p>Inspiração, imagens, IA e ferramentas num lugar só.</p>
-      <a class="pill" href="#inspiracao">Explorar a biblioteca <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="pill" href="#inspiracao">Explorar a biblioteca <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </section>
 
     <section class="container" id="biblioteca">
@@ -189,30 +202,30 @@
       <div class="container">
         <label class="search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input id="q" type="search" placeholder="Buscar (ex.: fotos, IA, mockup)" aria-label="Buscar sites">
+          <input id="q" name="q" type="search" placeholder="Buscar: fotos, IA, mockup…" aria-label="Buscar sites" autocomplete="off" spellcheck="false">
         </label>
         <div class="chips" id="chips"><a class="chip" href="#inspiracao">Inspiração de layout</a><a class="chip" href="#imagens">Imagens grátis</a><a class="chip" href="#ilustracoes">Ilustrações e vídeos com IA</a><a class="chip" href="#ferramentas">Ferramentas e mockups</a><a class="chip" href="#glossario">Glossário</a></div>
       </div>
     </div>
 
-    <div class="legend container" aria-label="Legenda"><b>MCP para agentes de IA:</b><span><i class="l-of"></i>Oficial, da própria empresa</span><span><i class="l-te"></i>De terceiros (comunidade)</span><span><i></i>Sem MCP oficial</span><a class="gl" href="#glossario">O que é MCP?</a></div>
+    <div class="legend container" role="note" aria-label="Legenda"><b>MCP para agentes de IA:</b><span><i class="l-of"></i>Oficial, da própria empresa</span><span><i class="l-te"></i>De terceiros (comunidade)</span><span><i></i>Sem MCP oficial</span><a class="gl" href="#glossario">O que é MCP?</a></div>
   <section class="cat container" id="inspiracao" data-cat="inspiracao">
     <div class="cat-head"><span class="num serif">01</span><div><h3>Inspiração de layout</h3><p>Veja como os melhores sites e apps resolvem cada seção antes de desenhar a sua.</p></div><span class="cnt">4 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://mobbin.com" target="_blank" rel="noopener noreferrer" data-name="mobbin telas e fluxos reais de apps e sites. inspiração de layout grátis limitado + assinatura mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/mobbin.png" alt="" width="32" height="32" loading="lazy"></span><strong>Mobbin</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/mobbin.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Mobbin</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Telas e fluxos reais de apps e sites.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis limitado + assinatura</span></span></span>
       </a>
       <a class="item card" href="https://www.awwwards.com" target="_blank" rel="noopener noreferrer" data-name="awwwards sites premiados, julgados por designers. inspiração de layout grátis sem mcp" data-mcp="no">
-        <span class="head"><span class="logo"><img src="logos/awwwards.png" alt="" width="32" height="32" loading="lazy"></span><strong>Awwwards</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/awwwards.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Awwwards</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Sites premiados, julgados por designers.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-no"><i></i>Sem MCP oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
       </a>
       <a class="item card" href="https://dribbble.com" target="_blank" rel="noopener noreferrer" data-name="dribbble shots de interface, ícones e marcas. inspiração de layout grátis + assinatura pro mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><img src="logos/dribbble.png" alt="" width="32" height="32" loading="lazy"></span><strong>Dribbble</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/dribbble.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Dribbble</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Shots de interface, ícones e marcas.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
       </a>
       <a class="item card" href="https://www.pinterest.com/search/pins/?q=website%20design" target="_blank" rel="noopener noreferrer" data-name="pinterest moodboards e referências rápidas. inspiração de layout grátis mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/pinterest.png" alt="" width="32" height="32" loading="lazy"></span><strong>Pinterest</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/pinterest.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Pinterest</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Moodboards e referências rápidas.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
       </a>
     </div>
@@ -221,11 +234,11 @@
     <div class="cat-head"><span class="num serif">02</span><div><h3>Imagens grátis</h3><p>Fotos e vídeos de alta qualidade para usar no site sem pagar.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://unsplash.com" target="_blank" rel="noopener noreferrer" data-name="unsplash fotos em alta, uso livre inclusive comercial. imagens grátis grátis + assinatura unsplash+ mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/unsplash.png" alt="" width="32" height="32" loading="lazy"></span><strong>Unsplash</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/unsplash.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Unsplash</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Fotos em alta, uso livre inclusive comercial.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Unsplash+</span></span></span>
       </a>
       <a class="item card" href="https://www.pexels.com" target="_blank" rel="noopener noreferrer" data-name="pexels fotos e vídeos grátis, ótimo para hero em vídeo. imagens grátis grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><img src="logos/pexels.png" alt="" width="32" height="32" loading="lazy"></span><strong>Pexels</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/pexels.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Pexels</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Fotos e vídeos grátis, ótimo para hero em vídeo.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis</span></span></span>
       </a>
     </div>
@@ -234,11 +247,11 @@
     <div class="cat-head"><span class="num serif">03</span><div><h3>Ilustrações e Vídeos com IA</h3><p>Para dar personalidade sem depender de foto, ou criar imagem e vídeo do zero.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" data-name="midjourney gera imagens com ia a partir de texto. ilustrações e vídeos com ia só assinatura, sem plano grátis mcp terceiros" data-mcp="te">
-        <span class="head"><span class="logo"><img src="logos/midjourney.png" alt="" width="32" height="32" loading="lazy"></span><strong>Midjourney</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/midjourney.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Midjourney</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Gera imagens com IA a partir de texto.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-te"><i></i>De terceiros</span></span><span class="row"><span class="k">Custo</span><span class="v">Só assinatura, sem plano grátis</span></span></span>
       </a>
       <a class="item card" href="https://higgsfield.ai" target="_blank" rel="noopener noreferrer" data-name="higgsfield gera imagens e vídeos com ia, com vários modelos num só lugar. ilustrações e vídeos com ia créditos + assinatura mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/higgsfield.png" alt="" width="32" height="32" loading="lazy"></span><strong>Higgsfield</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/higgsfield.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Higgsfield</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Gera imagens e vídeos com IA, com vários modelos num só lugar.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Créditos + assinatura</span></span></span>
       </a>
     </div>
@@ -247,11 +260,11 @@
     <div class="cat-head"><span class="num serif">04</span><div><h3>Ferramentas e mockups</h3><p>Para montar, apresentar e finalizar.</p></div><span class="cnt">2 sites</span></div>
     <div class="grid">
       <a class="item card" href="https://www.canva.com" target="_blank" rel="noopener noreferrer" data-name="canva artes, banners e logos rápidos. ferramentas e mockups grátis + assinatura pro mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/canva.png" alt="" width="32" height="32" loading="lazy"></span><strong>Canva</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/canva.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Canva</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Artes, banners e logos rápidos.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura Pro</span></span></span>
       </a>
       <a class="item card" href="https://www.figma.com/community" target="_blank" rel="noopener noreferrer" data-name="figma community: templates e kits de ui grátis. ferramentas e mockups grátis + assinatura (mcp completo no pago) mcp oficial" data-mcp="of">
-        <span class="head"><span class="logo"><img src="logos/figma.png" alt="" width="32" height="32" loading="lazy"></span><strong>Figma</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="head"><span class="logo"><img src="logos/figma.png" alt="" width="32" height="32" loading="lazy"></span><strong translate="no">Figma</strong><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <small>Community: templates e kits de UI grátis.</small><span class="meta"><span class="row"><span class="k">MCP</span><span class="v mcp-of"><i></i>Oficial</span></span><span class="row"><span class="k">Custo</span><span class="v">Grátis + assinatura (MCP completo no pago)</span></span></span>
       </a>
     </div>
@@ -260,14 +273,15 @@
     <div class="cat-head"><span class="num serif">05</span><div><h3>Glossário</h3><p>As palavras que aparecem aqui no site, explicadas sem complicação.</p></div><span class="cnt">10 termos</span></div>
     <dl class="terms"><div><dt>MCP</dt><dd>Conector que permite a uma IA, como o Claude, usar uma ferramenta por você: buscar imagens, abrir arquivos, editar um design. Nos cards, “Oficial” foi feito pela própria empresa, “De terceiros” foi feito pela comunidade e “Sem MCP oficial” ainda não existe.</dd></div><div><dt>Agentes de IA</dt><dd>IAs que não só respondem, mas executam tarefas por você, usando ferramentas para buscar, criar e editar. É por isso que cada card mostra se o site tem MCP.</dd></div><div><dt>UI e UX</dt><dd>UI é a aparência: cores, botões e telas. UX é a experiência de uso: se a pessoa acha o que procura com facilidade.</dd></div><div><dt>Layout</dt><dd>O jeito como os elementos ficam distribuídos na página. Os sites de Inspiração mostram layouts reais.</dd></div><div><dt>Hero</dt><dd>A primeira seção do site, a que aparece antes de rolar a página, com título, frase de apoio e botão. Costuma ter uma foto ou um vídeo de fundo.</dd></div><div><dt>Mockup</dt><dd>Simulação do design pronto dentro de um celular ou notebook, usada para apresentar o site ao cliente.</dd></div><div><dt>Moodboard</dt><dd>Painel de referências visuais (cores, fotos, sites) que define o clima do projeto. O Pinterest é muito usado para isso.</dd></div><div><dt>Template e kit</dt><dd>Modelos prontos para editar, como os kits de UI da comunidade do Figma.</dd></div><div><dt>Shots</dt><dd>Como o Dribbble chama as prévias de design que os designers publicam.</dd></div><div><dt>Custo</dt><dd>“Grátis” não cobra nada. “Assinatura” pede um plano pago. “Crédito” cobra por uso, como em gerar imagens e vídeos com IA.</dd></div></dl>
   </section>
+    <p class="sr-only" id="q-status" role="status" aria-live="polite"></p>
     <p class="empty container" id="empty">Nenhum site encontrado para essa busca.</p>
 
     <section class="band">
       <div class="container">
-        <div class="big">NOVVO</div>
+        <div class="big" translate="no">NOVVO</div>
         <h3>Seu Próximo Site <span class="serif">Começa Hoje.</span></h3>
         <p>Salve esta página nos favoritos e volte sempre que for começar um projeto novo.</p>
-        <a class="pill" href="#inicio">Voltar ao topo <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="pill" href="#inicio">Voltar ao topo <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </section>
   </main>
@@ -285,8 +299,11 @@
   const q=document.getElementById('q'),empty=document.getElementById('empty'),secs=[...document.querySelectorAll('.cat')];
   q.addEventListener('input',()=>{const v=q.value.trim().toLowerCase();let total=0;
     secs.forEach(s=>{let n=0;s.querySelectorAll('.item').forEach(c=>{const ok=!v||c.dataset.name.includes(v);c.style.display=ok?'':'none';if(ok){n++;reveal(c)}});s.style.display=n?'':'none';total+=n});
-    gloss.style.display=v?'none':'';empty.style.display=total?'none':'block';if(typeof spy==='function')spy();});
+    gloss.style.display=v?'none':'';empty.style.display=total?'none':'block';document.getElementById('q-status').textContent=v?(total?total+(total>1?' sites encontrados':' site encontrado'):'Nenhum site encontrado'):'';if(typeof spy==='function')spy();});
   const chips=[...document.querySelectorAll('.chip')];
+  const chipBox=document.getElementById('chips');
+  const chipFade=()=>{const max=chipBox.scrollWidth-chipBox.clientWidth;chipBox.classList.toggle('mais-e',chipBox.scrollLeft>2);chipBox.classList.toggle('mais-d',max>2&&chipBox.scrollLeft<max-2)};
+  chipBox.addEventListener('scroll',chipFade,{passive:true});addEventListener('resize',chipFade);document.fonts&&document.fonts.ready.then(chipFade);chipFade();
   const bar=document.querySelector('.toolbar');
   const setTb=()=>document.documentElement.style.setProperty('--toolbar-h',bar.offsetHeight+'px');setTb();addEventListener('resize',setTb);
   const gloss=document.getElementById('glossario'),navSecs=[...document.querySelectorAll('.cat,#glossario')];
@@ -310,7 +327,8 @@
     const head=sec.querySelector('.cat-head')||sec;const stick=(parseFloat(getComputedStyle(bar).top)||0)+bar.offsetHeight;const y=head.getBoundingClientRect().top+scrollY-stick-24;
     scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   }));
-  addEventListener('scroll',()=>{if(lockId){clearTimeout(lockTimer);lockTimer=setTimeout(()=>{lockId=null},180)}else spy()},{passive:true});
+  let spyRaf=0;
+  addEventListener('scroll',()=>{if(lockId){clearTimeout(lockTimer);lockTimer=setTimeout(()=>{lockId=null},180)}else if(!spyRaf)spyRaf=requestAnimationFrame(()=>{spyRaf=0;spy()})},{passive:true});
   addEventListener('wheel',()=>{lockId=null},{passive:true});
   addEventListener('touchstart',()=>{lockId=null},{passive:true});
   addEventListener('resize',spy);
